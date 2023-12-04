@@ -12,7 +12,7 @@ namespace GleyTrafficSystem
             new WindowProperties(Constants.trafficNamespace,nameof(RoadSetupWindow),"Road Setup",true,true,true,false,false,false,"https://youtu.be/-pJwE0Q34no"),
             new WindowProperties(Constants.trafficNamespace,nameof(WaypointSetupWindow),"Waypoint Setup",true,true,false,true,true,false,"https://youtu.be/mKfnm5_QW8s"),
             new WindowProperties(Constants.trafficNamespace,nameof(SceneSetupWindow), "Scene Setup",true,true,false,true,false,false,"https://youtu.be/203UgxPlfNo"),
-            new WindowProperties(Constants.trafficNamespace,nameof(ExternalToolsWindow), "External Tools",true,true,true,false,false,false,"https://youtu.be/203UgxPlfNo"),
+            //new WindowProperties(Constants.trafficNamespace,nameof(ExternalToolsWindow), "External Tools",true,true,true,false,false,false,"https://youtu.be/203UgxPlfNo"),
             new WindowProperties(Constants.trafficNamespace,nameof(DebugWindow), "Debug",true,true,true,false,false,false,"https://youtu.be/Bg-70Tum380"),
 
             //Road Setup
@@ -46,8 +46,8 @@ namespace GleyTrafficSystem
              new WindowProperties(Constants.trafficNamespace,nameof(VehicleTypesWindow), "Vehicle Types",true,true,true,true,true,false,"https://youtu.be/203UgxPlfNo"),
 
              //External Tools
-             new WindowProperties(Constants.trafficNamespace,nameof(EasyRoadsSetup), "Easy Roads Setup",true,true,true,true,false,false,"https://youtu.be/203UgxPlfNo"),
-             new WindowProperties(Constants.trafficNamespace,nameof(CidySetup), "Cidy Setup",true,true,true,true,false,false,"https://youtu.be/203UgxPlfNo"),
+             //new WindowProperties(Constants.trafficNamespace,nameof(EasyRoadsSetup), "Easy Roads Setup",true,true,true,true,false,false,"https://youtu.be/203UgxPlfNo"),
+             //new WindowProperties(Constants.trafficNamespace,nameof(CidySetup), "Cidy Setup",true,true,true,true,false,false,"https://youtu.be/203UgxPlfNo"),
         };
 
 

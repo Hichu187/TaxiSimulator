@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
     void SpawnSelectedVehicles()
     {
         int vehicleID = PlayerPrefs.GetInt("selectedVehicel");
+        _spawnedVehicles[vehicleID].transform.position = spawnPosition.position;
         _spawnedVehicles[vehicleID].gameObject.SetActive(true);
         trafficComponent.player = _spawnedVehicles[vehicleID].transform;
         trafficComponent.gameObject.SetActive(true);
