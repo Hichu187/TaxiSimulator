@@ -1,1 +1,1 @@
-public enum GameMode { Taxi, Challenge }
+public enum GameMode { Taxi, Refuel, Parking, Drive, Racing }
