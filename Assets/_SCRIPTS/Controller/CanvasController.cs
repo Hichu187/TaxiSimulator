@@ -4,23 +4,36 @@ using UnityEngine;
 using DG.Tweening;
 using MTAssets.EasyMinimapSystem;
 using Unity.VisualScripting;
+using TMPro;
 
 public class CanvasController : MonoBehaviour
 {
-    public PhoneCanvas phonePanel;
+    public static CanvasController instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+    [Header("Phone Canvas")]
     public MinimapRenderer minimap;
     public GameObject CarSelectionCanvas;
+
     //public GameObject selectBtn;
-    [Header("WIN CANVAS ")]
+    [Header("WIN CANVAS - Mode Taxi ")]
     public GameObject modeTaxiWinPanel;
+    public TextMeshProUGUI distanceUI;
+    public TextMeshProUGUI qualityUI;
+    public TextMeshProUGUI tipsUI;
+    public TextMeshProUGUI totalRewardUI;
+
+    [Header("WIN CANVAS - Mode Chalenge ")]
     public GameObject modeChallengeWinPanel;
+
 
     void Start()
     {
         EventController.instance.startGame += StartMinimap;
-        EventController.instance.accepted += ClosePhoneNotice;
-        EventController.instance.refuse += ClosePhoneNotice;
-        EventController.instance.takeACall += OpenPhoneNotice;
+
         EventController.instance.completeTrip += Complete;
 
         minimap.gameObject.SetActive(false);
@@ -28,33 +41,22 @@ public class CanvasController : MonoBehaviour
     public void StartMinimap()
     {
         minimap.minimapCameraToShow = GameController.instance.player.GetComponent<MinimapCamera>();
-        Invoke("OpenMinimap",1f);
-        //selectBtn.SetActive(true);
+        Invoke("OpenMinimap", 1f);
         CarSelectionCanvas.transform.GetChild(0).gameObject.SetActive(false);
     }
     void OpenMinimap()
     {
         minimap.gameObject.SetActive(true);
-    }
-    public void OpenPhoneNotice()
-    {
-        phonePanel.LoadData();
-        phonePanel.gameObject.SetActive(true);
-        phonePanel.transform.DOMoveY(0, 0.25f)
-        .SetEase(Ease.Linear);
-    }
 
-    public void ClosePhoneNotice()
-    {
-        phonePanel.transform.DOMoveY(-1000, 0.5f)
-        .OnComplete(() => { phonePanel.gameObject.SetActive(false); })
-        .SetEase(Ease.Linear);
     }
-
     public void Complete()
     {
         modeTaxiWinPanel.SetActive(true);
         Time.timeScale = 0;
+        distanceUI.text = QuestController.instance.distance + " km" ;
+        qualityUI.text = QuestController.instance.quality.ToString();
+        tipsUI.text = QuestController.instance.tips.ToString();
+        totalRewardUI.text = QuestController.instance.totalReward.ToString();
     }
     public void ClosePanel(GameObject obj)
     {

@@ -2,23 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using MTAssets.EasyMinimapSystem;
+using TMPro;
 using UnityEngine;
 
 public class QuestController : MonoBehaviour
 {
     public static QuestController instance;
     void Awake() { instance = this; }
+    [Header("GENERAL DATA")]
+    [SerializeField] List<QuestData> listQuests;
+    public List<Transform> customerPositions;
+    public List<Transform> destinationPositions;
+    public List<Transform> questPositions;
+    private float startTips = 100;
+    [Header("DATA")]
     [SerializeField] float timer;
     [SerializeField] MinimapRoutes mapRoutes;
     float countDown;
     int currentQuestId;
     public QuestData currentQuest;
     public Transform curDestination;
-    [SerializeField] List<QuestData> listQuests;
-    public List<Transform> customerPositions;
-    public List<Transform> destinationPositions;
-    public List<Transform> questPositions;
+
     public bool isPickedUpCustomer = false;
+    public GameObject routes;
+    private LineRenderer line;
+
+    //Complete data
+    public float distance;
+    public float cash;
+    public float tips;
+    public RideQuality quality;
+    public float totalReward;
+
+    [Header("Phone Canvas")]
+    public PhoneCanvas phonePanel;
+    public TextMeshProUGUI distanceUI;
+    public TextMeshProUGUI cashUI;
+    public GameObject CarSelectionCanvas;
+
     void Start()
     {
         //event
@@ -43,6 +64,7 @@ public class QuestController : MonoBehaviour
     void CountDownTimer()
     {
         Debug.Log("Start");
+        ClosePhoneNotice();
         countDown = timer;
         DOVirtual.Float(countDown, 0, countDown, t => { countDown = t; })
             .SetEase(Ease.Linear)
@@ -51,6 +73,7 @@ public class QuestController : MonoBehaviour
                 LoadQuest(); EventController.instance.TakeACall();
             });
     }
+
     public void SetUp_Start_Destination_Position()
     {
         customerPositions[currentQuestId].gameObject.SetActive(true);
@@ -58,6 +81,8 @@ public class QuestController : MonoBehaviour
         mapRoutes.startingPoint = GameController.instance.player.transform;
         mapRoutes.destinationPoint = customerPositions[currentQuestId];
         mapRoutes.enabled = true;
+        ClosePhoneNotice();
+        tips = startTips;
     }
     public void SetDestinationPoint()
     {
@@ -71,10 +96,16 @@ public class QuestController : MonoBehaviour
     {
         isPickedUpCustomer = false;
         mapRoutes.enabled = false;
+        
+
+        //reward
+        totalReward = cash +tips;
     }
 
     void LoadQuest()
     {
+        line = routes.transform.GetChild(0).GetComponent<LineRenderer>();
+
         currentQuestId = PlayerPrefs.GetInt("questID");
         if (currentQuestId < listQuests.Count)
         {
@@ -85,6 +116,50 @@ public class QuestController : MonoBehaviour
             PlayerPrefs.SetInt("questID", 0);
             currentQuestId = PlayerPrefs.GetInt("questID");
         }
+        mapRoutes.startingPoint = customerPositions[currentQuestId];
+        mapRoutes.destinationPoint = destinationPositions[currentQuestId];
+        mapRoutes.enabled = true;
 
+        Invoke("CalculateDistanceAndCash", 0.5f);
+
+    }
+
+    public void CalculateDistanceAndCash()
+    {
+        float length = 0f;
+
+        // Loop through each point in the line
+        for (int i = 0; i < line.positionCount - 1; i++)
+        {
+            // Calculate the distance between consecutive points and add to the total length
+            length += Vector3.Distance(line.GetPosition(i), line.GetPosition(i + 1));
+        }
+        //
+        mapRoutes.enabled = false;
+        distance = (Mathf.Round(length / 100 * Mathf.Pow(10, 1)) / Mathf.Pow(10, 1));
+        cash = distance * 50;
+        distanceUI.text = "Distance: " + distance + " km";
+        cashUI.text = "Receive: " + cash + " $";
+        OpenPhoneNotice();
+    }
+    public void OpenPhoneNotice()
+    {
+        phonePanel.LoadData();
+        phonePanel.gameObject.SetActive(true);
+        phonePanel.transform.DOMoveY(0, 0.25f)
+        .SetEase(Ease.Linear);
+    }
+    public void AcceptedCall()
+    {
+        phonePanel.transform.DOMoveY(-1000, 0.5f)
+        .OnComplete(() => { phonePanel.gameObject.SetActive(false); })
+        .SetEase(Ease.Linear);
+
+    }
+    public void ClosePhoneNotice()
+    {
+        phonePanel.transform.DOMoveY(-1000, 0.5f)
+        .OnComplete(() => { phonePanel.gameObject.SetActive(false); })
+        .SetEase(Ease.Linear);
     }
 }

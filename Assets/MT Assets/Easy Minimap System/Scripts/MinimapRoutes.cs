@@ -982,6 +982,8 @@ namespace MTAssets.EasyMinimapSystem
                 minimapRoutesHolder.SetParent(minimapDataHolderObj.transform);
                 minimapRoutesHolder.localPosition = Vector3.zero;
                 minimapRoutesHolder.localEulerAngles = Vector3.zero;
+
+                QuestController.instance.routes = minimapRoutesHolder.gameObject;
             }
             if (minimapDataHolder.instancesOfMinimapRoutesInThisScene.Contains(this) == false)
                 minimapDataHolder.instancesOfMinimapRoutesInThisScene.Add(this);

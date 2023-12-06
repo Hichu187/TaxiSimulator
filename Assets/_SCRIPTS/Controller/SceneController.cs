@@ -27,14 +27,10 @@ public class SceneController : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         EventController.instance.startDrive += LoadGameScene;
-        //loadingScene = GameObject.FindGameObjectWithTag("Background");
-        //slider = loadingScene.transform.GetChild(0).transform.GetChild(0).GetComponent<Image>();
     }
 
     void LoadGameScene()
     {
-        //SceneManager.LoadScene(1);
-
         StartCoroutine(LoadLevel());
     }
     public void Restart()
@@ -52,7 +48,6 @@ public class SceneController : MonoBehaviour
             float prg = Mathf.Clamp01(op.progress / .9f);
             Debug.Log(prg);
             slider.fillAmount = prg;
-            //progress.text = prg.ToString();
 
             yield return null;
         }

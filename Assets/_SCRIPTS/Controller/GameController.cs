@@ -45,6 +45,7 @@ public class GameController : MonoBehaviour
     void SetupMinimapRenderer()
     {
         minimapRenderer.SetActive(true);
+        
     }
 
 }
