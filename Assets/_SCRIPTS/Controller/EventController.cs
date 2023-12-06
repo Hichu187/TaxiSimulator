@@ -46,4 +46,10 @@ public class EventController : MonoBehaviour
     public event UnityAction getOut;
     public void GetOutCar() => getOut?.Invoke();
     #endregion
+
+
+    #region  ParkingMode
+    public event UnityAction parkingDone;
+    public void ParkingDone() => parkingDone?.Invoke();
+    #endregion
 }
