@@ -21,6 +21,9 @@ public class EventController : MonoBehaviour
     public event UnityAction startDrive;
     public void StartDrive() => startDrive?.Invoke();
 
+    public event UnityAction<float> damage;
+    public void Damage(float value) => damage?.Invoke(value);
+
     #region  Customer Quest
     public event UnityAction takeACall;
     public void TakeACall() => takeACall?.Invoke();
@@ -52,4 +55,5 @@ public class EventController : MonoBehaviour
     public event UnityAction parkingDone;
     public void ParkingDone() => parkingDone?.Invoke();
     #endregion
+
 }

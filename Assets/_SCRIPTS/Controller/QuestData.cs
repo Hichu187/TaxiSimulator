@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -12,14 +13,6 @@ public class QuestData : ScriptableObject
     public string description;
     public string customerShortText;
     public float timer;
-    // public GameObject sPos;
-    // public string customerPosition;
-    // public GameObject dPos;
-    // public string destinationPosition;
+    public List<string> dialogues;
 
-    // void OnValidate()
-    // {
-    //     if (sPos) customerPosition = sPos.name;
-    //     if (dPos) destinationPosition = dPos.name;
-    // }
 }

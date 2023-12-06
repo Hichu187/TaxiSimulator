@@ -15,11 +15,13 @@ public class QuestController : MonoBehaviour
     public List<Transform> destinationPositions;
     public List<Transform> questPositions;
     private float startTips = 100;
+    public RCC_CarControllerV3 player;
     [Header("DATA")]
     [SerializeField] float timer;
     [SerializeField] MinimapRoutes mapRoutes;
     float countDown;
     int currentQuestId;
+    int hitTime = 0;
     public QuestData currentQuest;
     public Transform curDestination;
 
@@ -47,7 +49,7 @@ public class QuestController : MonoBehaviour
         EventController.instance.pickUpCustomer += SetDestinationPoint;
         EventController.instance.completeTrip += Complete;
         EventController.instance.startGame += CountDownTimer;
-        //CountDownTimer();
+        EventController.instance.damage += VehicleHit;
         EventController.instance.refuse += CountDownTimer;
         EventController.instance.completeTrip += CountDownTimer;
 
@@ -63,7 +65,7 @@ public class QuestController : MonoBehaviour
     }
     void CountDownTimer()
     {
-        Debug.Log("Start");
+        player = GameController.instance.player;
         ClosePhoneNotice();
         countDown = timer;
         DOVirtual.Float(countDown, 0, countDown, t => { countDown = t; })
@@ -91,15 +93,16 @@ public class QuestController : MonoBehaviour
         isPickedUpCustomer = true;
         mapRoutes.destinationPoint = destinationPositions[currentQuestId];
         mapRoutes.enabled = true;
+        hitTime = 0;
+        quality = RideQuality.Happy;
     }
     public void Complete()
     {
         isPickedUpCustomer = false;
         mapRoutes.enabled = false;
-        
-
         //reward
-        totalReward = cash +tips;
+        QualityCheck();
+        totalReward = cash + tips;
     }
 
     void LoadQuest()
@@ -121,7 +124,6 @@ public class QuestController : MonoBehaviour
         mapRoutes.enabled = true;
 
         Invoke("CalculateDistanceAndCash", 0.5f);
-
     }
 
     public void CalculateDistanceAndCash()
@@ -161,5 +163,36 @@ public class QuestController : MonoBehaviour
         phonePanel.transform.DOMoveY(-1000, 0.5f)
         .OnComplete(() => { phonePanel.gameObject.SetActive(false); })
         .SetEase(Ease.Linear);
+    }
+
+    public void VehicleHit(float damage)
+    {
+        if (isPickedUpCustomer)
+        {
+            hitTime++;
+            if (tips > 0) tips -= 10f;
+            Debug.Log(hitTime);
+            QualityCheck();
+        }
+
+    }
+
+    void QualityCheck()
+    {
+        switch (hitTime)
+        {
+            case 0:
+                quality = RideQuality.Happy;
+                break;
+            case int n when n <= 3 && n > 0:
+                quality = RideQuality.Good;
+                break;
+            case int n when n <= 5 && n > 3:
+                quality = RideQuality.Shocked;
+                break;
+            case int n when n > 5:
+                quality = RideQuality.Angry;
+                break;
+        }
     }
 }

@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         SpawnSelectedVehicles();
+
     }
 
     void SpawnSelectedVehicles()
@@ -40,12 +41,12 @@ public class GameController : MonoBehaviour
     {
         player = FindObjectOfType<RCC_CarControllerV3>();
         EventController.instance.GameStart();
+        
 
     }
     void SetupMinimapRenderer()
     {
         minimapRenderer.SetActive(true);
-        
-    }
 
+    }
 }

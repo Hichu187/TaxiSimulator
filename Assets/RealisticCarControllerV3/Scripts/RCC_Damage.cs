@@ -703,6 +703,9 @@ public class RCC_Damage {
                 if (lights != null && lights.Length >= 1 && lightDamage)
                     DamageLight(impulse);
 
+                float damage = (float)((0.01 * Mathf.Pow(carController.speed,2))/2);
+
+                EventController.instance.Damage(damage);
             }
 
         }
