@@ -56,7 +56,7 @@ public class CanvasController : MonoBehaviour
         distanceUI.text = QuestController.instance.distance + " km" ;
         qualityUI.text = QuestController.instance.quality.ToString();
         tipsUI.text = QuestController.instance.tips.ToString();
-        totalRewardUI.text = QuestController.instance.totalReward.ToString();
+        totalRewardUI.text = (QuestController.instance.tips +QuestController.instance.cash).ToString() ;
     }
     public void ClosePanel(GameObject obj)
     {

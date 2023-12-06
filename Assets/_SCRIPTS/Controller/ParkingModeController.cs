@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MTAssets.EasyMinimapSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class ParkingModeController : MonoBehaviour
     public List<RCC_CarControllerV3> _spawnedVehicles = new List<RCC_CarControllerV3>();
     public Transform spawnPosition;
     public RCC_CarControllerV3 player;
+    public List<GameObject> parkObjectLevels;
 
     [Header("Canvas")]
     public GameObject noticeCanvas;
