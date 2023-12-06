@@ -1199,7 +1199,7 @@ MonoBehaviour:
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1
   externalController: 0
-  steeringType: 0
+  steeringType: 1
   steerAngleCurve:
     serializedVersion: 2
     m_Curve:
@@ -1234,10 +1234,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 5
+  highspeedsteerAngle: 15
   highspeedsteerAngleAtspeed: 120
-  antiRollFrontHorizontal: 9000
-  antiRollRearHorizontal: 9000
+  antiRollFrontHorizontal: 13000
+  antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 2575930283144312129}
   COMAssister: 0
@@ -1250,27 +1250,27 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 800
-      value: 200
-      inSlope: 0.04255319
-      outSlope: 0.04255319
+      value: 275
+      inSlope: 0.05851064
+      outSlope: 0.05851064
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 5500
-      value: 400
-      inSlope: -0.005390074
-      outSlope: -0.005390074
+      value: 550
+      inSlope: -0.0074113496
+      outSlope: -0.0074113496
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 8000
-      value: 266.66666
-      inSlope: -0.05333334
-      outSlope: -0.05333334
+      value: 366.66666
+      inSlope: -0.07333334
+      outSlope: -0.07333334
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -1279,7 +1279,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
-  maxEngineTorque: 400
+  maxEngineTorque: 550
   maxEngineTorqueAtRPM: 5500
   minEngineRPM: 800
   maxEngineRPM: 8000
@@ -1329,7 +1329,7 @@ MonoBehaviour:
   currentGear: 0
   NGear: 0
   finalRatio: 3.1
-  gearShiftingDelay: 0.02
+  gearShiftingDelay: 0
   gearShiftingThreshold: 1
   clutchInertia: 0.25
   gearShiftUpRPM: 6500
@@ -1423,15 +1423,15 @@ MonoBehaviour:
   ESP: 1
   steeringHelper: 1
   tractionHelper: 1
-  angularDragHelper: 0
+  angularDragHelper: 1
   ABSThreshold: 0.25
   TCSStrength: 0.5
   ESPThreshold: 0.25
   ESPStrength: 0.25
-  steerHelperLinearVelStrength: 0.3
-  steerHelperAngularVelStrength: 0.3
-  tractionHelperStrength: 0.5
-  angularDragHelperStrength: 0.1
+  steerHelperLinearVelStrength: 1
+  steerHelperAngularVelStrength: 1
+  tractionHelperStrength: 1
+  angularDragHelperStrength: 1
   ABSAct: 0
   TCSAct: 0
   ESPAct: 0
@@ -2005,11 +2005,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.36
   m_SuspensionSpring:
-    spring: 65000
-    damper: 3000
+    spring: 55000
+    damper: 5000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.25
-  m_ForceAppPointDistance: 0.05
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -2722,11 +2722,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.36
   m_SuspensionSpring:
-    spring: 65000
-    damper: 3000
+    spring: 55000
+    damper: 5000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.25
-  m_ForceAppPointDistance: 0.05
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -3549,11 +3549,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.36
   m_SuspensionSpring:
-    spring: 65000
-    damper: 3000
+    spring: 55000
+    damper: 5000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.25
-  m_ForceAppPointDistance: 0.05
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -4070,11 +4070,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.36
   m_SuspensionSpring:
-    spring: 65000
-    damper: 3000
+    spring: 55000
+    damper: 5000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.25
-  m_ForceAppPointDistance: 0.05
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:

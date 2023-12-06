@@ -78,8 +78,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0.0775, z: 0}
   m_Radius: 0.335
   m_SuspensionSpring:
-    spring: 55000
-    damper: 2500
+    spring: 75000
+    damper: 7500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -595,7 +595,7 @@ MonoBehaviour:
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1
   externalController: 0
-  steeringType: 0
+  steeringType: 1
   steerAngleCurve:
     serializedVersion: 2
     m_Curve:
@@ -630,10 +630,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 5
+  highspeedsteerAngle: 15
   highspeedsteerAngleAtspeed: 120
-  antiRollFrontHorizontal: 15000
-  antiRollRearHorizontal: 15000
+  antiRollFrontHorizontal: 13000
+  antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 2151354329410777043}
   COMAssister: 0
@@ -731,8 +731,8 @@ MonoBehaviour:
   currentGear: 0
   NGear: 0
   finalRatio: 3.1
-  gearShiftingDelay: 0.15
-  gearShiftingThreshold: 0.8
+  gearShiftingDelay: 0.001
+  gearShiftingThreshold: 1
   clutchInertia: 0.25
   gearShiftUpRPM: 6800
   gearShiftDownRPM: 3750
@@ -825,15 +825,15 @@ MonoBehaviour:
   ESP: 1
   steeringHelper: 1
   tractionHelper: 1
-  angularDragHelper: 0
-  ABSThreshold: 0.25
-  TCSStrength: 0.5
+  angularDragHelper: 1
+  ABSThreshold: 0.5
+  TCSStrength: 1
   ESPThreshold: 0.5
-  ESPStrength: 0.25
+  ESPStrength: 1
   steerHelperLinearVelStrength: 0.1
   steerHelperAngularVelStrength: 0.1
   tractionHelperStrength: 0.1
-  angularDragHelperStrength: 0.1
+  angularDragHelperStrength: 1
   ABSAct: 0
   TCSAct: 0
   ESPAct: 0
@@ -2534,8 +2534,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0.0775, z: 0}
   m_Radius: 0.335
   m_SuspensionSpring:
-    spring: 55000
-    damper: 2500
+    spring: 75000
+    damper: 7500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -3125,8 +3125,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0.0775, z: 0}
   m_Radius: 0.335
   m_SuspensionSpring:
-    spring: 55000
-    damper: 2500
+    spring: 75000
+    damper: 7500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -4007,8 +4007,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0.0775, z: 0}
   m_Radius: 0.335
   m_SuspensionSpring:
-    spring: 55000
-    damper: 2500
+    spring: 75000
+    damper: 7500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1

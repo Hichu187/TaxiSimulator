@@ -813,8 +813,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0.15, z: 0}
   m_Radius: 0.37
   m_SuspensionSpring:
-    spring: 65000
-    damper: 2500
+    spring: 40000
+    damper: 7500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -1547,8 +1547,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0.15, z: 0}
   m_Radius: 0.37
   m_SuspensionSpring:
-    spring: 65000
-    damper: 2500
+    spring: 40000
+    damper: 7500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -2162,8 +2162,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0.15, z: 0}
   m_Radius: 0.37
   m_SuspensionSpring:
-    spring: 65000
-    damper: 2500
+    spring: 40000
+    damper: 7500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -2646,8 +2646,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0.15, z: 0}
   m_Radius: 0.37
   m_SuspensionSpring:
-    spring: 65000
-    damper: 2500
+    spring: 40000
+    damper: 7500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -3264,7 +3264,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6510452757488501400}
   serializedVersion: 2
-  m_Mass: 850
+  m_Mass: 1500
   m_Drag: 0.01
   m_AngularDrag: 0.5
   m_UseGravity: 1
@@ -3306,7 +3306,7 @@ MonoBehaviour:
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1
   externalController: 0
-  steeringType: 0
+  steeringType: 1
   steerAngleCurve:
     serializedVersion: 2
     m_Curve:
@@ -3341,43 +3341,43 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 5
+  highspeedsteerAngle: 15
   highspeedsteerAngleAtspeed: 120
-  antiRollFrontHorizontal: 18000
-  antiRollRearHorizontal: 18000
+  antiRollFrontHorizontal: 13000
+  antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 6239930366628478574}
   COMAssister: 0
   brakeTorque: 5000
   downForce: 40
   speed: 0
-  maxspeed: 380
+  maxspeed: 360
   engineTorqueCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 4500
-      value: 400
-      inSlope: 0.06153846
-      outSlope: 0.06153846
+      value: 350
+      inSlope: 0.053846154
+      outSlope: 0.053846154
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 11000
-      value: 800
-      inSlope: 0.0041025616
-      outSlope: 0.0041025616
+      value: 700
+      inSlope: 0.0035897437
+      outSlope: 0.0035897437
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 16000
-      value: 533.3333
-      inSlope: -0.05333334
-      outSlope: -0.05333334
+      value: 466.66666
+      inSlope: -0.046666667
+      outSlope: -0.046666667
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3386,7 +3386,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
-  maxEngineTorque: 800
+  maxEngineTorque: 700
   maxEngineTorqueAtRPM: 11000
   minEngineRPM: 4500
   maxEngineRPM: 16000
@@ -3433,19 +3433,19 @@ MonoBehaviour:
     maxSpeed: 285
     targetSpeedForNextGear: 215
   - maxRatio: 0.9
-    maxSpeed: 332
+    maxSpeed: 320
     targetSpeedForNextGear: 251
   - maxRatio: 0.72
-    maxSpeed: 380
+    maxSpeed: 360
     targetSpeedForNextGear: 287
   totalGears: 8
   currentGear: 0
   NGear: 0
   finalRatio: 4
-  gearShiftingDelay: 0.01
+  gearShiftingDelay: 0.001
   gearShiftingThreshold: 0.9
   clutchInertia: 0.25
-  gearShiftUpRPM: 13500
+  gearShiftUpRPM: 11500
   gearShiftDownRPM: 9000
   changingGear: 0
   direction: 1
@@ -3541,9 +3541,9 @@ MonoBehaviour:
   TCSStrength: 0.5
   ESPThreshold: 0.5
   ESPStrength: 0.25
-  steerHelperLinearVelStrength: 0.1
-  steerHelperAngularVelStrength: 0.1
-  tractionHelperStrength: 0.1
+  steerHelperLinearVelStrength: 1
+  steerHelperAngularVelStrength: 1
+  tractionHelperStrength: 1
   angularDragHelperStrength: 0.1
   ABSAct: 0
   TCSAct: 0

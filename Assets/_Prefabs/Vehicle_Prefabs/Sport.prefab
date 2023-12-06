@@ -162,11 +162,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.1, z: 0}
   m_Radius: 0.37
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 80000
+    damper: 4000
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.05
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -331,11 +331,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.1, z: 0}
   m_Radius: 0.37
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 80000
+    damper: 4000
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.05
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -550,11 +550,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.1, z: 0}
   m_Radius: 0.37
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 80000
+    damper: 4000
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.05
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -935,7 +935,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.16976517, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.9751764, y: 0.39264694, z: 0.72604966}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1970,7 +1970,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.8093797, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0, y: 0.1071457, z: 0.104970925}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2318,7 +2318,7 @@ MonoBehaviour:
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1
   externalController: 0
-  steeringType: 0
+  steeringType: 1
   steerAngleCurve:
     serializedVersion: 2
     m_Curve:
@@ -2353,43 +2353,43 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 5
+  highspeedsteerAngle: 15
   highspeedsteerAngleAtspeed: 120
-  antiRollFrontHorizontal: 8000
-  antiRollRearHorizontal: 8000
+  antiRollFrontHorizontal: 5000
+  antiRollRearHorizontal: 5000
   antiRollVertical: 0
   COM: {fileID: 2596108791112655342}
   COMAssister: 0
   brakeTorque: 2500
   downForce: 25
   speed: 0
-  maxspeed: 280
+  maxspeed: 290
   engineTorqueCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 800
-      value: 225
-      inSlope: 0.047872342
-      outSlope: 0.047872342
+      value: 262.5
+      inSlope: 0.055851065
+      outSlope: 0.055851065
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 5500
-      value: 450
-      inSlope: -0.0060638282
-      outSlope: -0.0060638282
+      value: 525
+      inSlope: -0.007074468
+      outSlope: -0.007074468
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 8000
-      value: 300
-      inSlope: -0.06
-      outSlope: -0.06
+      value: 350
+      inSlope: -0.07
+      outSlope: -0.07
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -2398,7 +2398,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
-  maxEngineTorque: 450
+  maxEngineTorque: 525
   maxEngineTorqueAtRPM: 5500
   minEngineRPM: 800
   maxEngineRPM: 8000
@@ -2447,11 +2447,11 @@ MonoBehaviour:
   totalGears: 6
   currentGear: 0
   NGear: 0
-  finalRatio: 3.23
-  gearShiftingDelay: 0.35
-  gearShiftingThreshold: 0.75
+  finalRatio: 3.5
+  gearShiftingDelay: 0.001
+  gearShiftingThreshold: 1
   clutchInertia: 0.25
-  gearShiftUpRPM: 6750
+  gearShiftUpRPM: 9750
   gearShiftDownRPM: 4250
   changingGear: 0
   direction: 1
@@ -2547,10 +2547,10 @@ MonoBehaviour:
   TCSStrength: 0.5
   ESPThreshold: 0.5
   ESPStrength: 0.25
-  steerHelperLinearVelStrength: 0.1
-  steerHelperAngularVelStrength: 0.1
-  tractionHelperStrength: 0.1
-  angularDragHelperStrength: 0.1
+  steerHelperLinearVelStrength: 1
+  steerHelperAngularVelStrength: 1
+  tractionHelperStrength: 1
+  angularDragHelperStrength: 1
   ABSAct: 0
   TCSAct: 0
   ESPAct: 0
@@ -3005,7 +3005,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.7952862, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0, y: 0.09446163, z: 0.104970925}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -4330,7 +4330,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.16938221, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.97517097, y: 0.39230227, z: 0.72604954}
+  m_ConnectedAnchor: {x: 0.9751764, y: 0.39230224, z: 0.72604966}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -4881,11 +4881,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.1, z: 0}
   m_Radius: 0.37
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 80000
+    damper: 4000
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.05
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:

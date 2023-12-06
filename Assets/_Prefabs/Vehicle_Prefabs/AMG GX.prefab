@@ -3181,11 +3181,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.35
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 45000
+    damper: 5500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.1
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -3416,11 +3416,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.35
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 45000
+    damper: 5500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.1
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -3680,7 +3680,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7259400698497436021}
   serializedVersion: 2
-  m_Mass: 950
+  m_Mass: 1500
   m_Drag: 0.01
   m_AngularDrag: 0.5
   m_UseGravity: 1
@@ -3722,7 +3722,7 @@ MonoBehaviour:
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1
   externalController: 0
-  steeringType: 0
+  steeringType: 1
   steerAngleCurve:
     serializedVersion: 2
     m_Curve:
@@ -3757,43 +3757,43 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 5
+  highspeedsteerAngle: 15
   highspeedsteerAngleAtspeed: 120
-  antiRollFrontHorizontal: 3000
-  antiRollRearHorizontal: 3000
+  antiRollFrontHorizontal: 13000
+  antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 7530013804291003926}
   COMAssister: 0
   brakeTorque: 2000
   downForce: 25
   speed: 0
-  maxspeed: 240
+  maxspeed: 260
   engineTorqueCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 800
-      value: 150
-      inSlope: 0.031914894
-      outSlope: 0.031914894
+      value: 175
+      inSlope: 0.03723404
+      outSlope: 0.03723404
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 5500
-      value: 300
-      inSlope: -0.017375888
-      outSlope: -0.017375888
+      value: 350
+      inSlope: -0.02027187
+      outSlope: -0.02027187
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 7000
-      value: 200
-      inSlope: -0.06666667
-      outSlope: -0.06666667
+      value: 233.33333
+      inSlope: -0.07777778
+      outSlope: -0.07777778
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3802,7 +3802,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
-  maxEngineTorque: 300
+  maxEngineTorque: 350
   maxEngineTorqueAtRPM: 5500
   minEngineRPM: 800
   maxEngineRPM: 7000
@@ -3852,7 +3852,7 @@ MonoBehaviour:
   currentGear: 0
   NGear: 0
   finalRatio: 3.23
-  gearShiftingDelay: 0.35
+  gearShiftingDelay: 0.001
   gearShiftingThreshold: 0.75
   clutchInertia: 0.25
   gearShiftUpRPM: 6500
@@ -3951,9 +3951,9 @@ MonoBehaviour:
   TCSStrength: 0.5
   ESPThreshold: 0.5
   ESPStrength: 0.25
-  steerHelperLinearVelStrength: 0.1
-  steerHelperAngularVelStrength: 0.1
-  tractionHelperStrength: 0.1
+  steerHelperLinearVelStrength: 1
+  steerHelperAngularVelStrength: 1
+  tractionHelperStrength: 1
   angularDragHelperStrength: 0.1
   ABSAct: 0
   TCSAct: 0
@@ -4336,11 +4336,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.35
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 45000
+    damper: 5500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.1
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -4608,11 +4608,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.35
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 45000
+    damper: 5500
     targetPosition: 0.5
-  m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.1
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -5244,13 +5244,249 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8067427793163113423}
     m_Modifications:
+    - target: {fileID: 100334, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 104938, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 108138, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 115730, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
       propertyPath: m_Name
       value: Girl_11
       objectReference: {fileID: 0}
     - target: {fileID: 115730, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 115730, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118768, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 121722, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 121778, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 122058, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 122098, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 122784, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 126360, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 132744, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 133718, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 136030, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 138722, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 140834, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 141456, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 142298, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 142932, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 144902, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 146594, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 148746, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 149420, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 150606, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 151792, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 152734, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 153822, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 154056, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 157504, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 157738, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 157934, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 159492, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 160364, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 160376, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 164322, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 166214, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 170728, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 172954, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 173368, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 174130, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 175932, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 178014, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 178128, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 181968, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 182850, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 183524, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 185322, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 185394, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 186182, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 186430, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 188226, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 188876, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 189970, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 189990, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 191426, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 191940, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 194178, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 198738, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 199646, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 401580, guid: 5f9696d27f30a184193c8ecdf50c1256, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
