@@ -23,7 +23,7 @@ MonoBehaviour:
   viewRoadsSave:
     viewRoadsSettings:
       viewLanes: 1
-      viewWaypoints: 0
+      viewWaypoints: 1
       viewLaneChanges: 0
   connectRoadsSave:
     viewRoadsSettings:
@@ -33,8 +33,8 @@ MonoBehaviour:
     waypointDistance: 4
   roadDefaults:
     nrOfLanes: 2
-    laneWidth: 3
-    waypointDistance: 4
+    laneWidth: 4
+    waypointDistance: 3
   roadColors:
     textColor: {r: 1, g: 1, b: 1, a: 1}
     roadColor: {r: 0, g: 1, b: 0, a: 1}
@@ -80,7 +80,7 @@ MonoBehaviour:
       viewLanes: 0
       viewWaypoints: 1
       viewLaneChanges: 1
-    moveTool: 1
+    moveTool: 0
     maxSpeed: 50
     globalCarList: 00000000
   speedEditedWaypointsSettings:
