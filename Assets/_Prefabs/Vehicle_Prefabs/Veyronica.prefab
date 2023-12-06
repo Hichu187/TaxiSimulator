@@ -2696,11 +2696,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.375
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 45000
+    damper: 6500
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.05
+  m_ForceAppPointDistance: 0.15
   m_Mass: 80
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -2739,9 +2739,9 @@ MonoBehaviour:
   powerMultiplier: 1
   canSteer: 0
   steeringMultiplier: 1
-  canBrake: 0
+  canBrake: 1
   brakingMultiplier: 1
-  canHandbrake: 0
+  canHandbrake: 1
   handbrakeMultiplier: 1
   wheelWidth: 0.275
   wheelOffset: 0
@@ -2990,7 +2990,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7078665399904420339}
   serializedVersion: 2
-  m_Mass: 850
+  m_Mass: 1500
   m_Drag: 0.01
   m_AngularDrag: 0.5
   m_UseGravity: 1
@@ -3032,7 +3032,7 @@ MonoBehaviour:
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1
   externalController: 0
-  steeringType: 0
+  steeringType: 1
   steerAngleCurve:
     serializedVersion: 2
     m_Curve:
@@ -3067,10 +3067,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 5
+  highspeedsteerAngle: 15
   highspeedsteerAngleAtspeed: 120
-  antiRollFrontHorizontal: 10000
-  antiRollRearHorizontal: 10000
+  antiRollFrontHorizontal: 13000
+  antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 7997567740075499918}
   COMAssister: 0
@@ -3168,7 +3168,7 @@ MonoBehaviour:
   currentGear: 0
   NGear: 0
   finalRatio: 4
-  gearShiftingDelay: 0.02
+  gearShiftingDelay: 0.001
   gearShiftingThreshold: 0.9
   clutchInertia: 0.25
   gearShiftUpRPM: 13500
@@ -3263,14 +3263,14 @@ MonoBehaviour:
   steeringHelper: 1
   tractionHelper: 1
   angularDragHelper: 0
-  ABSThreshold: 0.5
-  TCSStrength: 1
+  ABSThreshold: 0.35
+  TCSStrength: 0.5
   ESPThreshold: 0.5
-  ESPStrength: 1
-  steerHelperLinearVelStrength: 0.2
-  steerHelperAngularVelStrength: 0.2
-  tractionHelperStrength: 0.1
-  angularDragHelperStrength: 0.1
+  ESPStrength: 0.25
+  steerHelperLinearVelStrength: 1
+  steerHelperAngularVelStrength: 1
+  tractionHelperStrength: 1
+  angularDragHelperStrength: 1
   ABSAct: 0
   TCSAct: 0
   ESPAct: 0
@@ -3528,11 +3528,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.375
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 45000
+    damper: 6500
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.05
+  m_ForceAppPointDistance: 0.15
   m_Mass: 80
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -3571,9 +3571,9 @@ MonoBehaviour:
   powerMultiplier: 1
   canSteer: 0
   steeringMultiplier: 1
-  canBrake: 0
+  canBrake: 1
   brakingMultiplier: 1
-  canHandbrake: 0
+  canHandbrake: 1
   handbrakeMultiplier: 1
   wheelWidth: 0.275
   wheelOffset: 0
@@ -4068,11 +4068,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.375
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 45000
+    damper: 6500
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.05
+  m_ForceAppPointDistance: 0.15
   m_Mass: 80
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -4111,9 +4111,9 @@ MonoBehaviour:
   powerMultiplier: 1
   canSteer: 0
   steeringMultiplier: 1
-  canBrake: 0
+  canBrake: 1
   brakingMultiplier: 1
-  canHandbrake: 0
+  canHandbrake: 1
   handbrakeMultiplier: 1
   wheelWidth: 0.275
   wheelOffset: 0
@@ -4339,11 +4339,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0.08, z: 0}
   m_Radius: 0.375
   m_SuspensionSpring:
-    spring: 60000
-    damper: 2500
+    spring: 45000
+    damper: 6500
     targetPosition: 0.5
   m_SuspensionDistance: 0.2
-  m_ForceAppPointDistance: 0.05
+  m_ForceAppPointDistance: 0.15
   m_Mass: 80
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -4382,9 +4382,9 @@ MonoBehaviour:
   powerMultiplier: 1
   canSteer: 0
   steeringMultiplier: 1
-  canBrake: 0
+  canBrake: 1
   brakingMultiplier: 1
-  canHandbrake: 0
+  canHandbrake: 1
   handbrakeMultiplier: 1
   wheelWidth: 0.275
   wheelOffset: 0

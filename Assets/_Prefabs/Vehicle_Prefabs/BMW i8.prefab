@@ -384,7 +384,7 @@ WheelCollider:
   m_Radius: 0.335
   m_SuspensionSpring:
     spring: 65000
-    damper: 3000
+    damper: 5500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -740,7 +740,7 @@ WheelCollider:
   m_Radius: 0.335
   m_SuspensionSpring:
     spring: 65000
-    damper: 3000
+    damper: 5500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -1864,7 +1864,7 @@ WheelCollider:
   m_Radius: 0.335
   m_SuspensionSpring:
     spring: 65000
-    damper: 3000
+    damper: 5500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -3608,7 +3608,7 @@ WheelCollider:
   m_Radius: 0.335
   m_SuspensionSpring:
     spring: 65000
-    damper: 3000
+    damper: 5500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.1
@@ -4192,7 +4192,7 @@ MonoBehaviour:
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1
   externalController: 0
-  steeringType: 0
+  steeringType: 1
   steerAngleCurve:
     serializedVersion: 2
     m_Curve:
@@ -4227,10 +4227,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 5
+  highspeedsteerAngle: 13
   highspeedsteerAngleAtspeed: 120
-  antiRollFrontHorizontal: 12000
-  antiRollRearHorizontal: 12000
+  antiRollFrontHorizontal: 13000
+  antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 8498384051920171647}
   COMAssister: 0
@@ -4243,27 +4243,27 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 800
-      value: 225
-      inSlope: 0.047872342
-      outSlope: 0.047872342
+      value: 200
+      inSlope: 0.04255319
+      outSlope: 0.04255319
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 5500
-      value: 450
-      inSlope: -0.0060638282
-      outSlope: -0.0060638282
+      value: 400
+      inSlope: -0.005390074
+      outSlope: -0.005390074
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 8000
-      value: 300
-      inSlope: -0.06
-      outSlope: -0.06
+      value: 266.66666
+      inSlope: -0.05333334
+      outSlope: -0.05333334
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -4272,7 +4272,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
-  maxEngineTorque: 450
+  maxEngineTorque: 400
   maxEngineTorqueAtRPM: 5500
   minEngineRPM: 800
   maxEngineRPM: 8000
@@ -4322,10 +4322,10 @@ MonoBehaviour:
   currentGear: 0
   NGear: 0
   finalRatio: 3.23
-  gearShiftingDelay: 0
+  gearShiftingDelay: 0.001
   gearShiftingThreshold: 0.75
   clutchInertia: 0.25
-  gearShiftUpRPM: 6750
+  gearShiftUpRPM: 6950
   gearShiftDownRPM: 4250
   changingGear: 0
   direction: 1
@@ -4421,9 +4421,9 @@ MonoBehaviour:
   TCSStrength: 0.5
   ESPThreshold: 0.5
   ESPStrength: 0.25
-  steerHelperLinearVelStrength: 0.1
-  steerHelperAngularVelStrength: 0.1
-  tractionHelperStrength: 0.1
+  steerHelperLinearVelStrength: 1
+  steerHelperAngularVelStrength: 1
+  tractionHelperStrength: 1
   angularDragHelperStrength: 0.1
   ABSAct: 0
   TCSAct: 0
