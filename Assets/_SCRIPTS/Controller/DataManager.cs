@@ -11,6 +11,7 @@ public class DataManager : MonoBehaviour
         if (!PlayerPrefs.HasKey("cash")) PlayerPrefs.SetFloat("cash", 0);
         if (!PlayerPrefs.HasKey("questID")) PlayerPrefs.SetInt("questID", 0);
         if (!PlayerPrefs.HasKey("parkingModeID")) PlayerPrefs.SetInt("parkingModeID", 0);
+        if (!PlayerPrefs.HasKey("questTime")) PlayerPrefs.SetInt("questTime", 0);
 
 
     }
@@ -37,11 +38,14 @@ public class DataManager : MonoBehaviour
     public void AddCoinNoAds()
     {
         PlayerPrefs.SetFloat("cash", PlayerPrefs.GetFloat("cash") + QuestController.instance.totalReward);
+        CanvasController.instance.ClosePanel(CanvasController.instance.modeTaxiWinPanel);
     }
 
     public void AddCoinAds()
     {
-        PlayerPrefs.SetFloat("cash", PlayerPrefs.GetFloat("cash") + QuestController.instance.totalReward *3);
+        PlayerPrefs.SetFloat("cash", PlayerPrefs.GetFloat("cash") + QuestController.instance.totalReward * 3);
+        CanvasController.instance.ClosePanel(CanvasController.instance.modeTaxiWinPanel);
+        
     }
 
 }

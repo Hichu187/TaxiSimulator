@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
-    public  GameObject loadingScene;
+    public GameObject loadingScene;
     public Image slider;
     void Awake()
     {
@@ -52,5 +52,10 @@ public class SceneController : MonoBehaviour
             yield return null;
         }
 
+    }
+
+    public void LoadParkingScene()
+    {
+        SceneManager.LoadScene(2);
     }
 }

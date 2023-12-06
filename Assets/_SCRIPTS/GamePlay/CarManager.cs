@@ -38,7 +38,7 @@ public class CarManager : MonoBehaviour
         rig.constraints = RigidbodyConstraints.FreezePosition;
     }
 
-    void EnableControlCar()
+    public void EnableControlCar()
     {
         controller.canControl = true;
         rig.constraints = RigidbodyConstraints.None;

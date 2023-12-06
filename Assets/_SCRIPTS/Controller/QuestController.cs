@@ -1,4 +1,4 @@
-using System.Collections;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using DG.Tweening;
 using MTAssets.EasyMinimapSystem;
@@ -10,18 +10,25 @@ public class QuestController : MonoBehaviour
     public static QuestController instance;
     void Awake() { instance = this; }
     [Header("GENERAL DATA")]
-    [SerializeField] List<QuestData> listQuests;
+    [SerializeField] List<QuestData> taxiModeQuests;
+
     public List<Transform> customerPositions;
     public List<Transform> destinationPositions;
-    public List<Transform> questPositions;
+    //public List<Transform> questPositions;
+    [Header("=========")]
+    [SerializeField] List<QuestData> challengeQuests;
     private float startTips = 100;
     public RCC_CarControllerV3 player;
+    [Header("=========")]
     [Header("DATA")]
     [SerializeField] float timer;
     [SerializeField] MinimapRoutes mapRoutes;
     float countDown;
     int currentQuestId;
+    int currentChallengeId;
+    public int questTime = 0;
     int hitTime = 0;
+
     public QuestData currentQuest;
     public Transform curDestination;
 
@@ -44,6 +51,8 @@ public class QuestController : MonoBehaviour
 
     void Start()
     {
+        questTime = PlayerPrefs.GetInt("questTime");
+
         //event
         EventController.instance.accepted += SetUp_Start_Destination_Position;
         EventController.instance.pickUpCustomer += SetDestinationPoint;
@@ -61,7 +70,7 @@ public class QuestController : MonoBehaviour
     {
         foreach (var c in customerPositions) { c.gameObject.SetActive(false); }
         foreach (var d in destinationPositions) { d.gameObject.SetActive(false); }
-        foreach (var q in questPositions) { q.gameObject.SetActive(false); }
+        //foreach (var q in questPositions) { q.gameObject.SetActive(false); }
     }
     void CountDownTimer()
     {
@@ -103,27 +112,46 @@ public class QuestController : MonoBehaviour
         //reward
         QualityCheck();
         totalReward = cash + tips;
+        if (questTime < 2) { questTime++; PlayerPrefs.SetInt("questTime", questTime); }
     }
 
     void LoadQuest()
     {
         line = routes.transform.GetChild(0).GetComponent<LineRenderer>();
 
-        currentQuestId = PlayerPrefs.GetInt("questID");
-        if (currentQuestId < listQuests.Count)
+        if (questTime < 2)
         {
-            currentQuest = listQuests[currentQuestId];
+            currentQuestId = PlayerPrefs.GetInt("questID");
+            if (currentQuestId < taxiModeQuests.Count)
+            {
+                currentQuest = taxiModeQuests[currentQuestId];
+            }
+            else
+            {
+                PlayerPrefs.SetInt("questID", 0);
+                currentQuestId = PlayerPrefs.GetInt("questID");
+            }
+            mapRoutes.startingPoint = customerPositions[currentQuestId];
+            mapRoutes.destinationPoint = destinationPositions[currentQuestId];
+            mapRoutes.enabled = true;
         }
         else
         {
-            PlayerPrefs.SetInt("questID", 0);
-            currentQuestId = PlayerPrefs.GetInt("questID");
-        }
-        mapRoutes.startingPoint = customerPositions[currentQuestId];
-        mapRoutes.destinationPoint = destinationPositions[currentQuestId];
-        mapRoutes.enabled = true;
+            currentChallengeId = PlayerPrefs.GetInt("parkingModeID");
 
+            if (currentChallengeId < challengeQuests.Count)
+            {
+                currentQuest = challengeQuests[currentChallengeId];
+            }
+            else
+            {
+                PlayerPrefs.SetInt("parkingModeID", 0);
+                currentChallengeId = PlayerPrefs.GetInt("questID");
+            }
+        }
+        
         Invoke("CalculateDistanceAndCash", 0.5f);
+
     }
 
     public void CalculateDistanceAndCash()
@@ -138,10 +166,19 @@ public class QuestController : MonoBehaviour
         }
         //
         mapRoutes.enabled = false;
-        distance = (Mathf.Round(length / 100 * Mathf.Pow(10, 1)) / Mathf.Pow(10, 1));
-        cash = distance * 50;
-        distanceUI.text = "Distance: " + distance + " km";
-        cashUI.text = "Receive: " + cash + " $";
+        if (questTime < 2)
+        {
+            distance = (Mathf.Round(length / 100 * Mathf.Pow(10, 1)) / Mathf.Pow(10, 1));
+            cash = distance * 50;
+            distanceUI.text = "Distance: " + distance + " km";
+            cashUI.text = "Receive: " + cash + " $";
+        }
+        else
+        {
+            distanceUI.text = "";
+            cashUI.text = "";
+        }
+
         OpenPhoneNotice();
     }
     public void OpenPhoneNotice()
@@ -192,6 +229,19 @@ public class QuestController : MonoBehaviour
                 break;
             case int n when n > 5:
                 quality = RideQuality.Angry;
+                break;
+        }
+    }
+    public void QuestStart()
+    {
+        switch (currentQuest.mode)
+        {
+            case GameMode.Taxi:
+                EventController.instance.AcceptedCall();
+                break;
+            case GameMode.Parking:
+                PlayerPrefs.SetInt("questTime", 0);
+                SceneController.instance.LoadParkingScene();
                 break;
         }
     }
