@@ -9,6 +9,7 @@ public class DataManager : MonoBehaviour
     {
         instance = this;
         if (!PlayerPrefs.HasKey("questID")) PlayerPrefs.SetInt("questID", 0);
+        if (!PlayerPrefs.HasKey("parkingModeID")) PlayerPrefs.SetInt("parkingModeID", 0);
 
 
     }
