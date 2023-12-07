@@ -1409,17 +1409,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1000
       value: 212.5
-      inSlope: 0.060714286
-      outSlope: 0.060714286
+      inSlope: 0.047222223
+      outSlope: 0.047222223
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 4500
+      time: 5500
       value: 425
-      inSlope: 0.006746033
-      outSlope: 0.006746033
+      inSlope: -0.011805551
+      outSlope: -0.011805551
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -1427,8 +1427,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 7500
       value: 283.33334
-      inSlope: -0.04722222
-      outSlope: -0.04722222
+      inSlope: -0.070833325
+      outSlope: -0.070833325
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -1438,7 +1438,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
   maxEngineTorque: 425
-  maxEngineTorqueAtRPM: 4500
+  maxEngineTorqueAtRPM: 5500
   minEngineRPM: 1000
   maxEngineRPM: 7500
   engineRPM: 0
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   gearShiftingDelay: 0.001
   gearShiftingThreshold: 0.9
   clutchInertia: 0.25
-  gearShiftUpRPM: 5800
+  gearShiftUpRPM: 6500
   gearShiftDownRPM: 3500
   changingGear: 0
   direction: 1
@@ -1583,9 +1583,9 @@ MonoBehaviour:
   TCSStrength: 1
   ESPThreshold: 0.5
   ESPStrength: 1
-  steerHelperLinearVelStrength: 0.1
-  steerHelperAngularVelStrength: 0.1
-  tractionHelperStrength: 0.1
+  steerHelperLinearVelStrength: 0.2
+  steerHelperAngularVelStrength: 0.2
+  tractionHelperStrength: 0.2
   angularDragHelperStrength: 1
   ABSAct: 0
   TCSAct: 0

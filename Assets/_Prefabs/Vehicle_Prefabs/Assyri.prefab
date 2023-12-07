@@ -1044,8 +1044,8 @@ MonoBehaviour:
   antiRollVertical: 0
   COM: {fileID: 3022996322491119411}
   COMAssister: 0
-  brakeTorque: 2000
-  downForce: 25
+  brakeTorque: 3000
+  downForce: 30
   speed: 0
   maxspeed: 240
   engineTorqueCurve:
@@ -1135,7 +1135,7 @@ MonoBehaviour:
   gearShiftingDelay: 0.001
   gearShiftingThreshold: 0.75
   clutchInertia: 0.25
-  gearShiftUpRPM: 6800
+  gearShiftUpRPM: 6500
   gearShiftDownRPM: 3500
   changingGear: 0
   direction: 1
@@ -1231,9 +1231,9 @@ MonoBehaviour:
   TCSStrength: 0.5
   ESPThreshold: 0.5
   ESPStrength: 0.25
-  steerHelperLinearVelStrength: 0.1
-  steerHelperAngularVelStrength: 0.1
-  tractionHelperStrength: 0.1
+  steerHelperLinearVelStrength: 0.2
+  steerHelperAngularVelStrength: 0.2
+  tractionHelperStrength: 0.2
   angularDragHelperStrength: 1
   ABSAct: 0
   TCSAct: 0

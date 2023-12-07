@@ -3341,15 +3341,15 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 15
+  highspeedsteerAngle: 25
   highspeedsteerAngleAtspeed: 120
   antiRollFrontHorizontal: 13000
   antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 6239930366628478574}
   COMAssister: 0
-  brakeTorque: 5000
-  downForce: 40
+  brakeTorque: 8500
+  downForce: 45
   speed: 0
   maxspeed: 360
   engineTorqueCurve:
@@ -3358,17 +3358,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 4500
       value: 350
-      inSlope: 0.053846154
-      outSlope: 0.053846154
+      inSlope: 0.058333334
+      outSlope: 0.058333334
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 11000
+      time: 10500
       value: 700
-      inSlope: 0.0035897437
-      outSlope: 0.0035897437
+      inSlope: 0.007954545
+      outSlope: 0.007954545
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3376,8 +3376,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 16000
       value: 466.66666
-      inSlope: -0.046666667
-      outSlope: -0.046666667
+      inSlope: -0.042424243
+      outSlope: -0.042424243
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3387,7 +3387,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
   maxEngineTorque: 700
-  maxEngineTorqueAtRPM: 11000
+  maxEngineTorqueAtRPM: 10500
   minEngineRPM: 4500
   maxEngineRPM: 16000
   engineRPM: 0
@@ -3445,7 +3445,7 @@ MonoBehaviour:
   gearShiftingDelay: 0.001
   gearShiftingThreshold: 0.9
   clutchInertia: 0.25
-  gearShiftUpRPM: 11500
+  gearShiftUpRPM: 11000
   gearShiftDownRPM: 9000
   changingGear: 0
   direction: 1
