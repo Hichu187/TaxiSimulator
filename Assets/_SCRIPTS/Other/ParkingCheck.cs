@@ -11,8 +11,6 @@ public class ParkingCheck : MonoBehaviour
         {
             EventController.instance.ParkingDone();
             this.transform.parent.gameObject.SetActive(false);
-
-            PlayerPrefs.SetInt("parkingModeID", PlayerPrefs.GetInt("parkingModeID") + 1);
         }
     }
 }

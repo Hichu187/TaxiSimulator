@@ -5,13 +5,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ParkingModeController : MonoBehaviour
+public class ChallengeModeController : MonoBehaviour
 {
-    public static ParkingModeController instance;
+    public static ChallengeModeController instance;
     public List<RCC_CarControllerV3> _spawnedVehicles = new List<RCC_CarControllerV3>();
     public Transform spawnPosition;
     public RCC_CarControllerV3 player;
-    public List<GameObject> parkObjectLevels;
+    public GameObject objectLevels;
+    public GameObject currentLevelObject;
 
     [Header("Canvas")]
     public GameObject noticeCanvas;
@@ -20,12 +21,16 @@ public class ParkingModeController : MonoBehaviour
     void Awake()
     {
         instance = this;
+        if (!PlayerPrefs.HasKey("challengeId")) PlayerPrefs.SetInt("challengeId", 0);
     }
     void Start()
     {
         noticeCanvas.SetActive(false);
         SpawnSelectedVehicles();
+        SetUpLevel();
+
         EventController.instance.parkingDone += ParkingDone;
+        Debug.Log(objectLevels.transform.childCount);
     }
 
     void SpawnSelectedVehicles()
@@ -37,6 +42,13 @@ public class ParkingModeController : MonoBehaviour
         Invoke("StartGame", 1);
     }
 
+    void SetUpLevel()
+    {
+        int parkingLv = PlayerPrefs.GetInt("challengeId");
+        currentLevelObject = objectLevels.transform.GetChild(parkingLv).gameObject;
+        currentLevelObject.SetActive(true);
+
+    }
     public void StartGame()
     {
         player = FindObjectOfType<RCC_CarControllerV3>();
@@ -51,6 +63,15 @@ public class ParkingModeController : MonoBehaviour
     public void WinChallenge()
     {
         noticeCanvas.SetActive(true);
+
+        if (PlayerPrefs.GetInt("challengeId") < objectLevels.transform.childCount)
+        {
+            PlayerPrefs.SetInt("challengeId", PlayerPrefs.GetInt("challengeId") + 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("challengeId", 0);
+        }
     }
     public void ReturnMainScene()
     {

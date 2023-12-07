@@ -18,7 +18,7 @@ public class HumanController : MonoBehaviour
 
     void Waiting()
     {
-        anim.CrossFade("idle1", 0);
+        anim.CrossFade("Idle", 0);
     }
 
     void GetInCar()

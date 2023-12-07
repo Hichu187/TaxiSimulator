@@ -2795,7 +2795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94835301}
   m_Layer: 0
-  m_Name: Parking_Level (5)
+  m_Name: Level (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4790,7 +4790,7 @@ GameObject:
   - component: {fileID: 155261196}
   - component: {fileID: 155261197}
   m_Layer: 0
-  m_Name: ======PARKING======
+  m_Name: ======CHALLENGE======
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4843,17 +4843,8 @@ MonoBehaviour:
   - {fileID: 395951978}
   spawnPosition: {fileID: 1217493306}
   player: {fileID: 0}
-  parkObjectLevels:
-  - {fileID: 1857962691}
-  - {fileID: 872994405}
-  - {fileID: 686640769}
-  - {fileID: 902833219}
-  - {fileID: 94835300}
-  - {fileID: 1930776080}
-  - {fileID: 519284792}
-  - {fileID: 882215131}
-  - {fileID: 474132494}
-  - {fileID: 304491974}
+  objectLevels: {fileID: 1174650641}
+  currentLevelObject: {fileID: 0}
   noticeCanvas: {fileID: 421234600}
   loadingScene: {fileID: 1599692933}
   slider: {fileID: 1510480834}
@@ -9853,7 +9844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 304491975}
   m_Layer: 0
-  m_Name: Parking_Level (10)
+  m_Name: Level (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14474,7 +14465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474132495}
   m_Layer: 0
-  m_Name: Parking_Level (9)
+  m_Name: Level (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16626,7 +16617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 519284793}
   m_Layer: 0
-  m_Name: Parking_Level (7)
+  m_Name: Level (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21498,7 +21489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 686640770}
   m_Layer: 0
-  m_Name: Parking_Level (3)
+  m_Name: Level (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26322,7 +26313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 872994406}
   m_Layer: 0
-  m_Name: Parking_Level (2)
+  m_Name: Level (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26548,7 +26539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 882215132}
   m_Layer: 0
-  m_Name: Parking_Level (8)
+  m_Name: Level (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27131,7 +27122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 902833220}
   m_Layer: 0
-  m_Name: Parking_Level (4)
+  m_Name: Level (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35811,7 +35802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1174650642}
   m_Layer: 0
-  m_Name: Parking_List
+  m_Name: Challenge_List
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51161,13 +51152,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assyri
       objectReference: {fileID: 0}
+    - target: {fileID: 2680414674853726946, guid: 36ea78cf22ebe8044acd2b9d7c0657ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3348829150547202136, guid: 36ea78cf22ebe8044acd2b9d7c0657ef, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3348829150547202136, guid: 36ea78cf22ebe8044acd2b9d7c0657ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -97.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3348829150547202136, guid: 36ea78cf22ebe8044acd2b9d7c0657ef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -51175,7 +51170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3348829150547202136, guid: 36ea78cf22ebe8044acd2b9d7c0657ef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3348829150547202136, guid: 36ea78cf22ebe8044acd2b9d7c0657ef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51916,12 +51911,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1857962692}
   m_Layer: 0
-  m_Name: Parking_Level (1)
+  m_Name: Level (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1857962692
 Transform:
   m_ObjectHideFlags: 0
@@ -54046,7 +54041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1930776081}
   m_Layer: 0
-  m_Name: Parking_Level (6)
+  m_Name: Level (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
