@@ -10,7 +10,7 @@ public class DataManager : MonoBehaviour
         instance = this;
         if (!PlayerPrefs.HasKey("cash")) PlayerPrefs.SetFloat("cash", 0);
         if (!PlayerPrefs.HasKey("questID")) PlayerPrefs.SetInt("questID", 0);
-        if (!PlayerPrefs.HasKey("parkingModelId")) PlayerPrefs.SetInt("parkingModelId", 0);
+        if (!PlayerPrefs.HasKey("challengeId")) PlayerPrefs.SetInt("challengeId", 0);
         if (!PlayerPrefs.HasKey("questTime")) PlayerPrefs.SetInt("questTime", 0);
 
 

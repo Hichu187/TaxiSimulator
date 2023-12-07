@@ -11,7 +11,7 @@ public class ChallengeModeController : MonoBehaviour
     public List<RCC_CarControllerV3> _spawnedVehicles = new List<RCC_CarControllerV3>();
     public Transform spawnPosition;
     public RCC_CarControllerV3 player;
-    public List<GameObject> objectLevels;
+    public GameObject objectLevels;
     public GameObject currentLevelObject;
 
     [Header("Canvas")]
@@ -21,6 +21,7 @@ public class ChallengeModeController : MonoBehaviour
     void Awake()
     {
         instance = this;
+        if (!PlayerPrefs.HasKey("challengeId")) PlayerPrefs.SetInt("challengeId", 0);
     }
     void Start()
     {
@@ -29,6 +30,7 @@ public class ChallengeModeController : MonoBehaviour
         SetUpLevel();
 
         EventController.instance.parkingDone += ParkingDone;
+        Debug.Log(objectLevels.transform.childCount);
     }
 
     void SpawnSelectedVehicles()
@@ -42,8 +44,8 @@ public class ChallengeModeController : MonoBehaviour
 
     void SetUpLevel()
     {
-        int parkingLv = PlayerPrefs.GetInt("parkingModelId");
-        currentLevelObject = objectLevels[parkingLv];
+        int parkingLv = PlayerPrefs.GetInt("challengeId");
+        currentLevelObject = objectLevels.transform.GetChild(parkingLv).gameObject;
         currentLevelObject.SetActive(true);
 
     }
@@ -62,13 +64,13 @@ public class ChallengeModeController : MonoBehaviour
     {
         noticeCanvas.SetActive(true);
 
-        if (PlayerPrefs.GetInt("parkingModelId") < objectLevels.Count)
+        if (PlayerPrefs.GetInt("challengeId") < objectLevels.transform.childCount)
         {
-            PlayerPrefs.SetInt("parkingModelId", PlayerPrefs.GetInt("parkingModelId") + 1);
+            PlayerPrefs.SetInt("challengeId", PlayerPrefs.GetInt("challengeId") + 1);
         }
         else
         {
-            PlayerPrefs.SetInt("parkingModelId", 0);
+            PlayerPrefs.SetInt("challengeId", 0);
         }
     }
     public void ReturnMainScene()
