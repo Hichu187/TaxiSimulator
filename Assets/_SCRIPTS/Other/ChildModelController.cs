@@ -12,15 +12,15 @@ public class ChildModelController : MonoBehaviour
 
     public void Close()
     {
-        transform.parent.GetComponent<Animator>().CrossFade("Close", 0);
-        transform.parent.GetComponent<RCC_CarControllerV3>().canControl = true;
+        transform.parent.transform.parent.GetComponent<Animator>().CrossFade("Close", 0);
+        transform.parent.transform.parent.GetComponent<RCC_CarControllerV3>().canControl = true;
         EventController.instance.CompleteTheTrip();
 
     }
     public void PickUpPassenger()
     {
-        transform.parent.GetComponent<Animator>().CrossFade("Close", 0);
-        transform.parent.GetComponent<RCC_CarControllerV3>().canControl = true;
+        transform.parent.transform.parent.GetComponent<Animator>().CrossFade("Close", 0);
+        transform.parent.transform.parent.GetComponent<RCC_CarControllerV3>().canControl = true;
         EventController.instance.PickUpCustomer();
         this.gameObject.SetActive(false);
     }

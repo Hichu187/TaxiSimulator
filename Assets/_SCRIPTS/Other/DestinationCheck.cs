@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem.XR;
 
 public class DestinationCheck : MonoBehaviour
@@ -8,6 +10,13 @@ public class DestinationCheck : MonoBehaviour
     private RCC_CarControllerV3 vehicle;
     private float timeInsideTrigger = 0f;
     private float requiredTimeInsideTrigger = 3f;
+    public List<GameObject> charModel;
+    public GameObject curModel;
+
+    private void Start()
+    {
+        //curModel = charModel[PlayerPrefs.GetInt("questID")];
+    }
     private void OnTriggerEnter(Collider other)
     {
         //  Getting car controller.
@@ -18,9 +27,6 @@ public class DestinationCheck : MonoBehaviour
             return;
         vehicle = carController;
         timeInsideTrigger = 0f;
-
-
-
     }
 
     private void OnTriggerStay(Collider other)
@@ -52,13 +58,15 @@ public class DestinationCheck : MonoBehaviour
     }
     public void StopCar()
     {
-        vehicle.canControl = false;
-        vehicle.GetComponent<Animator>().CrossFade("Open", 0);
+        curModel.GetComponent<NavMeshAgent>().SetDestination(vehicle.GetComponent<CarManager>().doorPosition.position);
+
+        // vehicle.canControl = false;
+        // vehicle.GetComponent<Animator>().CrossFade("Open", 0);
 
         //Event
-        if (QuestController.instance.isPickedUpCustomer) EventController.instance.GetOutCar();
-        else {EventController.instance.GetInCar();}
-        
+        // if (QuestController.instance.isPickedUpCustomer) EventController.instance.GetOutCar();
+        // else { EventController.instance.GetInCar(); }
+
         //Invoke("ResetCar", 2);
     }
 
