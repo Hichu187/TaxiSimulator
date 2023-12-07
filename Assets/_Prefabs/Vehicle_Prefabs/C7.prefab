@@ -3945,7 +3945,7 @@ MonoBehaviour:
   COM: {fileID: 7021524579362495729}
   COMAssister: 0
   brakeTorque: 3000
-  downForce: 20
+  downForce: 30
   speed: 0
   maxspeed: 320
   engineTorqueCurve:
@@ -3954,17 +3954,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 800
       value: 200
-      inSlope: 0.04494382
-      outSlope: 0.04494382
+      inSlope: 0.042105265
+      outSlope: 0.042105265
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 5250
+      time: 5550
       value: 400
-      inSlope: -0.005896887
-      outSlope: -0.005896887
+      inSlope: -0.011467695
+      outSlope: -0.011467695
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3972,8 +3972,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 7600
       value: 266.66666
-      inSlope: -0.056737594
-      outSlope: -0.056737594
+      inSlope: -0.065040655
+      outSlope: -0.065040655
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -3983,7 +3983,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
   maxEngineTorque: 400
-  maxEngineTorqueAtRPM: 5250
+  maxEngineTorqueAtRPM: 5550
   minEngineRPM: 800
   maxEngineRPM: 7600
   engineRPM: 0
@@ -4131,9 +4131,9 @@ MonoBehaviour:
   TCSStrength: 1
   ESPThreshold: 0.5
   ESPStrength: 0.1
-  steerHelperLinearVelStrength: 0.1
-  steerHelperAngularVelStrength: 0.1
-  tractionHelperStrength: 0.1
+  steerHelperLinearVelStrength: 0.2
+  steerHelperAngularVelStrength: 0.2
+  tractionHelperStrength: 0.2
   angularDragHelperStrength: 1
   ABSAct: 0
   TCSAct: 0

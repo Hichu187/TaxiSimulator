@@ -4227,15 +4227,15 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 13
+  highspeedsteerAngle: 15
   highspeedsteerAngleAtspeed: 120
   antiRollFrontHorizontal: 13000
   antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 8498384051920171647}
   COMAssister: 0
-  brakeTorque: 2500
-  downForce: 25
+  brakeTorque: 4000
+  downForce: 30
   speed: 0
   maxspeed: 280
   engineTorqueCurve:
@@ -4325,7 +4325,7 @@ MonoBehaviour:
   gearShiftingDelay: 0.001
   gearShiftingThreshold: 0.75
   clutchInertia: 0.25
-  gearShiftUpRPM: 6950
+  gearShiftUpRPM: 6500
   gearShiftDownRPM: 4250
   changingGear: 0
   direction: 1

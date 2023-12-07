@@ -4285,14 +4285,14 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 5
+  highspeedsteerAngle: 15
   highspeedsteerAngleAtspeed: 120
   antiRollFrontHorizontal: 13000
   antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 3050278206301083186}
   COMAssister: 0
-  brakeTorque: 3000
+  brakeTorque: 3750
   downForce: 25
   speed: 0
   maxspeed: 240
@@ -4469,9 +4469,9 @@ MonoBehaviour:
   useCollisionParticles: 1
   useCollisionAudio: 1
   maximumContactSparkle: 5
-  ABS: 0
-  TCS: 0
-  ESP: 0
+  ABS: 1
+  TCS: 1
+  ESP: 1
   steeringHelper: 1
   tractionHelper: 1
   angularDragHelper: 1

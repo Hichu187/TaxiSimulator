@@ -3948,8 +3948,8 @@ MonoBehaviour:
   antiRollVertical: 0
   COM: {fileID: 5051443815823719478}
   COMAssister: 0
-  brakeTorque: 2000
-  downForce: 25
+  brakeTorque: 3500
+  downForce: 30
   speed: 0
   maxspeed: 240
   engineTorqueCurve:
@@ -4125,9 +4125,9 @@ MonoBehaviour:
   useCollisionParticles: 1
   useCollisionAudio: 1
   maximumContactSparkle: 5
-  ABS: 0
-  TCS: 0
-  ESP: 0
+  ABS: 1
+  TCS: 1
+  ESP: 1
   steeringHelper: 1
   tractionHelper: 1
   angularDragHelper: 0

@@ -3670,15 +3670,15 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 15
+  highspeedsteerAngle: 50
   highspeedsteerAngleAtspeed: 120
   antiRollFrontHorizontal: 13000
   antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 7994611977211576446}
   COMAssister: 0
-  brakeTorque: 2000
-  downForce: 25
+  brakeTorque: 4500
+  downForce: 30
   speed: 0
   maxspeed: 240
   engineTorqueCurve:
@@ -3825,7 +3825,7 @@ MonoBehaviour:
     automaticInstallation: 1
     meshDeformation: 1
     deformationMode: 1
-    damageResolution: 100
+    damageResolution: 1
     damageFilter:
       serializedVersion: 2
       m_Bits: 130879

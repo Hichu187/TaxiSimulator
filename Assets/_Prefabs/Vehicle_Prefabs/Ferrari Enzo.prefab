@@ -46,7 +46,7 @@ WheelCollider:
     spring: 70000
     damper: 7000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.2
+  m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.05
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -926,7 +926,7 @@ WheelCollider:
     spring: 70000
     damper: 7000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.2
+  m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.05
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -1586,7 +1586,7 @@ WheelCollider:
     spring: 70000
     damper: 7000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.2
+  m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.05
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -2517,15 +2517,15 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 15
+  highspeedsteerAngle: 20
   highspeedsteerAngleAtspeed: 120
   antiRollFrontHorizontal: 13000
   antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 5315804956443667465}
   COMAssister: 0
-  brakeTorque: 2000
-  downForce: 25
+  brakeTorque: 4000
+  downForce: 30
   speed: 0
   maxspeed: 270
   engineTorqueCurve:
@@ -2534,17 +2534,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 800
       value: 275
-      inSlope: 0.05851064
-      outSlope: 0.05851064
+      inSlope: 0.048245613
+      outSlope: 0.048245613
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 5500
+      time: 6500
       value: 550
-      inSlope: -0.0013002381
-      outSlope: -0.0013002381
+      inSlope: -0.021710528
+      outSlope: -0.021710528
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -2552,8 +2552,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 8500
       value: 366.66666
-      inSlope: -0.061111115
-      outSlope: -0.061111115
+      inSlope: -0.09166667
+      outSlope: -0.09166667
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -2563,7 +2563,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
   maxEngineTorque: 550
-  maxEngineTorqueAtRPM: 5500
+  maxEngineTorqueAtRPM: 6500
   minEngineRPM: 800
   maxEngineRPM: 8500
   engineRPM: 0
@@ -3487,7 +3487,7 @@ WheelCollider:
     spring: 70000
     damper: 7000
     targetPosition: 0.5
-  m_SuspensionDistance: 0.2
+  m_SuspensionDistance: 0.25
   m_ForceAppPointDistance: 0.05
   m_Mass: 20
   m_WheelDampingRate: 0.25
