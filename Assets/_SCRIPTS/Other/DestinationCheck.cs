@@ -12,10 +12,13 @@ public class DestinationCheck : MonoBehaviour
     private float requiredTimeInsideTrigger = 3f;
     public List<GameObject> charModel;
     public GameObject curModel;
-
+    public bool endPos;
     private void Start()
     {
         //curModel = charModel[PlayerPrefs.GetInt("questID")];
+        EventController.instance.setupDone += PickupDone;
+
+        if(endPos) transform.GetChild(0).gameObject.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -34,12 +37,20 @@ public class DestinationCheck : MonoBehaviour
         if (vehicle)
         {
             timeInsideTrigger += Time.deltaTime;
-
             if (timeInsideTrigger >= requiredTimeInsideTrigger)
             {
-                gameObject.GetComponent<CapsuleCollider>().enabled = false;
+                gameObject.GetComponent<CapsuleCollider>().enabled = false; 
                 gameObject.GetComponent<MeshRenderer>().enabled = false;
-                StopCar();
+
+                if (!QuestController.instance.isPickedUpCustomer)
+                {
+                    EventController.instance.CarStop();
+                }
+                else
+                {
+                    transform.GetChild(0).gameObject.SetActive(true);
+                    EventController.instance.CarStop();
+                }
             }
         }
         else return;
@@ -56,25 +67,14 @@ public class DestinationCheck : MonoBehaviour
         }
         else return;
     }
-    public void StopCar()
+
+    private void PickupDone()
     {
-        curModel.GetComponent<NavMeshAgent>().SetDestination(vehicle.GetComponent<CarManager>().doorPosition.position);
-
-        // vehicle.canControl = false;
-        // vehicle.GetComponent<Animator>().CrossFade("Open", 0);
-
-        //Event
-        // if (QuestController.instance.isPickedUpCustomer) EventController.instance.GetOutCar();
-        // else { EventController.instance.GetInCar(); }
-
-        //Invoke("ResetCar", 2);
+        EventController.instance.PickUpCustomer();
     }
 
-    private void ResetCar()
+    private void CompleteTrip()
     {
-        vehicle.GetComponent<Animator>().CrossFade("Close", 0);
-        vehicle.canControl = true;
-        if (!QuestController.instance.isPickedUpCustomer) EventController.instance.PickUpCustomer();
-        else EventController.instance.CompleteTheTrip();
+
     }
 }
