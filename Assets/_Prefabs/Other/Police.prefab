@@ -736,7 +736,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6903763253476788888}
   - component: {fileID: 6903763253476788889}
-  - component: {fileID: 6903763253476788890}
   m_Layer: 0
   m_Name: Police
   m_TagString: Untagged
@@ -776,65 +775,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6903763253476788890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6903763253476788903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 553b295576fe05b438789855a6cd979c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6903763253476788889}
-  carHolder: {fileID: 6903763253461260794}
-  allWheels:
-  - wheelTransform: {fileID: 0}
-    wheelGraphics: {fileID: 0}
-    wheelPosition: 0
-    wheelRadius: 0.3287399
-    wheelCircumference: 2.0655339
-    raycastLength: 0.4602359
-    maxSuspension: 0.13149597
-  - wheelTransform: {fileID: 0}
-    wheelGraphics: {fileID: 0}
-    wheelPosition: 0
-    wheelRadius: 0.3287399
-    wheelCircumference: 2.0655339
-    raycastLength: 0.4602359
-    maxSuspension: 0.13149597
-  - wheelTransform: {fileID: 0}
-    wheelGraphics: {fileID: 0}
-    wheelPosition: 1
-    wheelRadius: 0.3287399
-    wheelCircumference: 2.0655339
-    raycastLength: 0.4602359
-    maxSuspension: 0.13149597
-  - wheelTransform: {fileID: 0}
-    wheelGraphics: {fileID: 0}
-    wheelPosition: 1
-    wheelRadius: 0.3287399
-    wheelCircumference: 2.0655339
-    raycastLength: 0.4602359
-    maxSuspension: 0.13149597
-  frontTrigger: {fileID: 6903763252489534469}
-  shadowHolder: {fileID: 0}
-  vehicleType: 0
-  maxSuspension: 0
-  suspensionPosition: 0.5
-  maxSteer: 30
-  minPossibleSpeed: 15
-  maxPossibleSpeed: 30
-  accelerationTime: 10
-  brakeTime: 1
-  safeDistance: 50
-  overtakeDistance: 17.687305
-  length: 4.4218264
-  coliderHeight: 1
-  wheelDistance: 2.658
-  visibilityScript: {fileID: 0}
 --- !u!1 &6903763253520827920
 GameObject:
   m_ObjectHideFlags: 0

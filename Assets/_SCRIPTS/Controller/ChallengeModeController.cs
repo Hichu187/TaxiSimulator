@@ -5,13 +5,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ParkingModeController : MonoBehaviour
+public class ChallengeModeController : MonoBehaviour
 {
-    public static ParkingModeController instance;
+    public static ChallengeModeController instance;
     public List<RCC_CarControllerV3> _spawnedVehicles = new List<RCC_CarControllerV3>();
     public Transform spawnPosition;
     public RCC_CarControllerV3 player;
-    public List<GameObject> parkObjectLevels;
+    public List<GameObject> objectLevels;
+    public GameObject currentLevelObject;
 
     [Header("Canvas")]
     public GameObject noticeCanvas;
@@ -25,6 +26,8 @@ public class ParkingModeController : MonoBehaviour
     {
         noticeCanvas.SetActive(false);
         SpawnSelectedVehicles();
+        SetUpLevel();
+
         EventController.instance.parkingDone += ParkingDone;
     }
 
@@ -37,6 +40,13 @@ public class ParkingModeController : MonoBehaviour
         Invoke("StartGame", 1);
     }
 
+    void SetUpLevel()
+    {
+        int parkingLv = PlayerPrefs.GetInt("parkingModelId");
+        currentLevelObject = objectLevels[parkingLv];
+        currentLevelObject.SetActive(true);
+
+    }
     public void StartGame()
     {
         player = FindObjectOfType<RCC_CarControllerV3>();
@@ -51,6 +61,15 @@ public class ParkingModeController : MonoBehaviour
     public void WinChallenge()
     {
         noticeCanvas.SetActive(true);
+
+        if (PlayerPrefs.GetInt("parkingModelId") < objectLevels.Count)
+        {
+            PlayerPrefs.SetInt("parkingModelId", PlayerPrefs.GetInt("parkingModelId") + 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("parkingModelId", 0);
+        }
     }
     public void ReturnMainScene()
     {

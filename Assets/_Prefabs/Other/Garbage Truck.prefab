@@ -498,7 +498,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2375068538288304984}
   - component: {fileID: 2375068538288304985}
-  - component: {fileID: 2375068538288304986}
   m_Layer: 0
   m_Name: Garbage Truck
   m_TagString: Untagged
@@ -538,79 +537,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2375068538288304986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2375068538288304987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 553b295576fe05b438789855a6cd979c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 2375068538288304985}
-  carHolder: {fileID: 2375068537703489052}
-  allWheels:
-  - wheelTransform: {fileID: 2375068536907790763}
-    wheelGraphics: {fileID: 982443686389295572}
-    wheelPosition: 0
-    wheelRadius: 0
-    wheelCircumference: 0
-    raycastLength: 0
-    maxSuspension: 0
-  - wheelTransform: {fileID: 2375068537955440325}
-    wheelGraphics: {fileID: 6282984384790557580}
-    wheelPosition: 1
-    wheelRadius: 0
-    wheelCircumference: 0
-    raycastLength: 0
-    maxSuspension: 0
-  - wheelTransform: {fileID: 2375068537101099709}
-    wheelGraphics: {fileID: 136803379665435924}
-    wheelPosition: 0
-    wheelRadius: 0
-    wheelCircumference: 0
-    raycastLength: 0
-    maxSuspension: 0
-  - wheelTransform: {fileID: 2375068538175498692}
-    wheelGraphics: {fileID: 7980313934774197811}
-    wheelPosition: 1
-    wheelRadius: 0
-    wheelCircumference: 0
-    raycastLength: 0
-    maxSuspension: 0
-  - wheelTransform: {fileID: 3213173451712432582}
-    wheelGraphics: {fileID: 8677859700370103153}
-    wheelPosition: 0
-    wheelRadius: 0
-    wheelCircumference: 0
-    raycastLength: 0
-    maxSuspension: 0
-  - wheelTransform: {fileID: 51476394163009537}
-    wheelGraphics: {fileID: 8738628698798573063}
-    wheelPosition: 0
-    wheelRadius: 0
-    wheelCircumference: 0
-    raycastLength: 0
-    maxSuspension: 0
-  frontTrigger: {fileID: 2818991670998054454}
-  shadowHolder: {fileID: 0}
-  vehicleType: 0
-  maxSuspension: 0
-  suspensionPosition: 0.5
-  maxSteer: 30
-  minPossibleSpeed: 15
-  maxPossibleSpeed: 30
-  accelerationTime: 10
-  brakeTime: 1
-  safeDistance: 50
-  overtakeDistance: 17.687305
-  length: 4.4218264
-  coliderHeight: 1
-  wheelDistance: 0
-  visibilityScript: {fileID: 3169447277916189322}
 --- !u!1 &2375068538301554800
 GameObject:
   m_ObjectHideFlags: 0
