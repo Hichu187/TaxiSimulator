@@ -31,6 +31,8 @@ public class EventController : MonoBehaviour
     public void AcceptedCall() => accepted?.Invoke();
     public event UnityAction refuse;
     public void RefuseCall() => refuse?.Invoke();
+    public event UnityAction carStop;
+    public void CarStop() => carStop?.Invoke();
     public event UnityAction pickUpCustomer;
     public void PickUpCustomer() => pickUpCustomer?.Invoke();
     public event UnityAction completeTrip;
@@ -46,6 +48,11 @@ public class EventController : MonoBehaviour
     public event UnityAction getIn;
     public void GetInCar() => getIn?.Invoke();
 
+    public event UnityAction closeDoor;
+    public void CloseDoor() => closeDoor?.Invoke();
+
+    public event UnityAction setupDone;
+    public void SetupDone() => setupDone?.Invoke();
     public event UnityAction getOut;
     public void GetOutCar() => getOut?.Invoke();
     #endregion
