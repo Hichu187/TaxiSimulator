@@ -18,7 +18,7 @@ public class DestinationCheck : MonoBehaviour
         //curModel = charModel[PlayerPrefs.GetInt("questID")];
         EventController.instance.setupDone += PickupDone;
 
-        if(endPos) transform.GetChild(0).gameObject.SetActive(false);
+        if (endPos) transform.GetChild(0).gameObject.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -39,17 +39,17 @@ public class DestinationCheck : MonoBehaviour
             timeInsideTrigger += Time.deltaTime;
             if (timeInsideTrigger >= requiredTimeInsideTrigger)
             {
-                gameObject.GetComponent<CapsuleCollider>().enabled = false; 
+                gameObject.GetComponent<CapsuleCollider>().enabled = false;
                 gameObject.GetComponent<MeshRenderer>().enabled = false;
 
                 if (!QuestController.instance.isPickedUpCustomer)
                 {
-                    EventController.instance.CarStop();
+                    CarStop();
                 }
                 else
                 {
                     transform.GetChild(0).gameObject.SetActive(true);
-                    EventController.instance.CarStop();
+                    CarStop();
                 }
             }
         }
@@ -67,7 +67,11 @@ public class DestinationCheck : MonoBehaviour
         }
         else return;
     }
-
+    void CarStop()
+    {
+        EventController.instance.CarStop();
+        this.transform.GetChild(0).GetComponent<ChildModelController>().CarStop();
+    }
     private void PickupDone()
     {
         EventController.instance.PickUpCustomer();

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3929132478375576286}
   - component: {fileID: 83543911616335227}
   - component: {fileID: 2795673203271874993}
+  - component: {fileID: 8980690421738190220}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Untagged
@@ -84,6 +85,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8980690421738190220
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4453151316980963428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1868545532798234700, guid: 291ea7f9aa9cf07418c56ddd7eb55280, type: 3}
 --- !u!1 &4475754124856343202
 GameObject:
   m_ObjectHideFlags: 0

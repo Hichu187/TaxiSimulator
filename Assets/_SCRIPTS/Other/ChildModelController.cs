@@ -17,7 +17,7 @@ public class ChildModelController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         vehicle = FindObjectOfType<CarManager>();
 
-        EventController.instance.carStop += CarStop;
+        //EventController.instance.carStop += CarStop;
         EventController.instance.setupDone += Disable;
         EventController.instance.setupDone += Disable;
 
@@ -26,8 +26,7 @@ public class ChildModelController : MonoBehaviour
     {
         if (isMoving)
         {
-            Debug.Log(Vector3.Distance(this.transform.position, vehicle.doorPosition.position));
-            if (Vector3.Distance(this.transform.position, vehicle.doorPosition.position) <= 0.1f)
+            if (Vector3.Distance(this.transform.position, vehicle.doorPosition.position) <= 0.15f)
             {
                 isMoving = false;
                 agent.SetDestination(this.transform.position);
@@ -42,7 +41,7 @@ public class ChildModelController : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    void CarStop()
+    public void CarStop()
     {
         if (!QuestController.instance.isPickedUpCustomer)
         {
@@ -52,7 +51,10 @@ public class ChildModelController : MonoBehaviour
         }
         else
         {
+            Debug.Log(vehicle.passengerSheet.position);
+            agent.enabled = false;
             this.transform.position = vehicle.passengerSheet.position;
+            Debug.Log(this.transform.position);
             this.transform.rotation = vehicle.passengerSheet.rotation;
             anim.CrossFade("Exiting Car", 0);
         }

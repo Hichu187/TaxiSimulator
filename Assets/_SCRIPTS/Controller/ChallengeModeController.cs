@@ -64,7 +64,7 @@ public class ChallengeModeController : MonoBehaviour
     {
         noticeCanvas.SetActive(true);
 
-        if (PlayerPrefs.GetInt("challengeId") < objectLevels.transform.childCount)
+        if (PlayerPrefs.GetInt("challengeId") < objectLevels.transform.childCount - 1)
         {
             PlayerPrefs.SetInt("challengeId", PlayerPrefs.GetInt("challengeId") + 1);
         }
@@ -90,6 +90,9 @@ public class ChallengeModeController : MonoBehaviour
             slider.fillAmount = prg;
             yield return null;
         }
-
+    }
+    public void Reset()
+    {
+        SceneManager.LoadScene(2);
     }
 }

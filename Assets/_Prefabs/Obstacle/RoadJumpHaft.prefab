@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 470540970259260423}
   - component: {fileID: 3542196631860226978}
   - component: {fileID: 1642862066296282984}
+  - component: {fileID: 4942490090668375268}
   m_Layer: 0
   m_Name: RoadJumpHaft
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4942490090668375268
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994277543326678717}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2545825347369993072, guid: 2b3c18a9bc697224f8a48374dc126416, type: 3}

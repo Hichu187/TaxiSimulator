@@ -26,6 +26,7 @@ public class CarManager : MonoBehaviour
         EventController.instance.getOut += EnablePassenger;
         EventController.instance.getIn += Pickup;
         EventController.instance.closeDoor += CloseDoor;
+        EventController.instance.completeTrip += EnableControlCar;
     }
 
     void Pickup()

@@ -137,7 +137,7 @@ public class QuestController : MonoBehaviour
         }
         else
         {
-            currentChallengeId = PlayerPrefs.GetInt("parkingModelId");
+            currentChallengeId = PlayerPrefs.GetInt("challengeId");
 
             if (currentChallengeId < challengeQuests.Count)
             {
@@ -145,8 +145,8 @@ public class QuestController : MonoBehaviour
             }
             else
             {
-                PlayerPrefs.SetInt("parkingModeID", 0);
-                currentChallengeId = PlayerPrefs.GetInt("parkingModelId");
+                PlayerPrefs.SetInt("challengeId", 0);
+                currentChallengeId = PlayerPrefs.GetInt("challengeId");
             }
         }
         
