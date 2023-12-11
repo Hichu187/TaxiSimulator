@@ -169,8 +169,8 @@ public class QuestController : MonoBehaviour
         {
             distance = (Mathf.Round(length / 100 * Mathf.Pow(10, 1)) / Mathf.Pow(10, 1));
             cash = distance * 50;
-            distanceUI.text = "Distance: " + distance + " km";
-            cashUI.text = "Receive: " + cash + " $";
+            distanceUI.text =distance + " km";
+            cashUI.text =cash + " $";
         }
         else
         {
