@@ -10,6 +10,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 /// <summary>
 /// Receiving inputs from active vehicle on your scene, and feeds dashboard needles, texts, images.
@@ -32,6 +33,7 @@ public class RCC_DashboardInputs : MonoBehaviour {
     public GameObject heatNeedle;
     public GameObject fuelGauge;
     public GameObject fuelNeedle;
+    public Image  fueltank;
 
     //  Needle rotations.
     private float RPMNeedleRotation = 0f;
@@ -201,6 +203,8 @@ public class RCC_DashboardInputs : MonoBehaviour {
             fuelNeedleRotation = (vehicle.fuelTank / vehicle.fuelTankCapacity) * 270f;
             fuelNeedle.transform.eulerAngles = new Vector3(fuelNeedle.transform.eulerAngles.x, fuelNeedle.transform.eulerAngles.y, -fuelNeedleRotation);
 
+        }
+        if(fueltank){
         }
 
     }

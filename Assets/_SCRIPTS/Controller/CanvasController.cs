@@ -42,7 +42,7 @@ public class CanvasController : MonoBehaviour
     {
         minimap.minimapCameraToShow = GameController.instance.player.GetComponent<MinimapCamera>();
         Invoke("OpenMinimap", 1f);
-        CarSelectionCanvas.transform.GetChild(0).gameObject.SetActive(false);
+        //CarSelectionCanvas.transform.GetChild(0).gameObject.SetActive(false);
     }
     void OpenMinimap()
     {
