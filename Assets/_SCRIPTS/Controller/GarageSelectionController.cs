@@ -8,6 +8,8 @@ public class GarageSelectionController : MonoBehaviour
     public List<RCC_CarControllerV3> _spawnedVehicles = new List<RCC_CarControllerV3>();
     public Transform spawnPosition;
     public int selectedIndex = 0;
+
+    public List<VehicleData> vehicleDatas;
     [SerializeField] GameObject item;
     public List<GameObject> btns;
     private void Awake()
@@ -16,6 +18,12 @@ public class GarageSelectionController : MonoBehaviour
         {
             GameObject spawnItem = Instantiate(item, item.transform.parent);
             btns.Add(spawnItem);
+            spawnItem.transform.GetChild(0).GetComponent<Image>().sprite = vehicleDatas[i].icon;
+
+            for (int j = 0; j < vehicleDatas[i].star; j++)
+            {
+                spawnItem.transform.GetChild(1).transform.GetChild(j).gameObject.SetActive(true);
+            }
         }
         Destroy(item);
         PlayerPrefs.SetInt("selectedVehicel", 0);
