@@ -63,4 +63,8 @@ public class EventController : MonoBehaviour
     public void ParkingDone() => parkingDone?.Invoke();
     #endregion
 
+
+    public event UnityAction<int> addCash;
+    public void AddCash(int value) => addCash?.Invoke(value);
+
 }

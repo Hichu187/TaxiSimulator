@@ -5,6 +5,7 @@ using DG.Tweening;
 using MTAssets.EasyMinimapSystem;
 using Unity.VisualScripting;
 using TMPro;
+using UnityEngine.UI;
 
 public class CanvasController : MonoBehaviour
 {
@@ -15,8 +16,8 @@ public class CanvasController : MonoBehaviour
         instance = this;
     }
     [Header("Phone Canvas")]
+    public GameObject phoneIcon;
     public MinimapRenderer minimap;
-    public GameObject CarSelectionCanvas;
 
     //public GameObject selectBtn;
     [Header("WIN CANVAS - Mode Taxi ")]
@@ -33,7 +34,8 @@ public class CanvasController : MonoBehaviour
     void Start()
     {
         EventController.instance.startGame += StartMinimap;
-
+        EventController.instance.takeACall += TakeACall;
+        EventController.instance.accepted += PickUp;
         EventController.instance.completeTrip += Complete;
 
         minimap.gameObject.SetActive(false);
@@ -47,16 +49,30 @@ public class CanvasController : MonoBehaviour
     void OpenMinimap()
     {
         minimap.gameObject.SetActive(true);
-
     }
+
+    public void TakeACall()
+    {
+        phoneIcon.GetComponent<Image>().raycastTarget = true;
+        phoneIcon.transform.GetChild(1).gameObject.SetActive(true);
+        phoneIcon.transform.GetChild(0).GetComponent<Animator>().CrossFade("Shake", 0);
+    }
+
+    public void PickUp()
+    {
+        phoneIcon.GetComponent<Image>().raycastTarget = false;
+        phoneIcon.transform.GetChild(1).gameObject.SetActive(false);
+        phoneIcon.transform.GetChild(0).GetComponent<Animator>().CrossFade("Normal", 0);
+    }
+
     public void Complete()
     {
         modeTaxiWinPanel.SetActive(true);
         Time.timeScale = 0;
-        distanceUI.text = QuestController.instance.distance + " km" ;
+        distanceUI.text = QuestController.instance.distance + " km";
         qualityUI.text = QuestController.instance.quality.ToString();
         tipsUI.text = QuestController.instance.tips.ToString();
-        totalRewardUI.text = (QuestController.instance.tips +QuestController.instance.cash).ToString() ;
+        totalRewardUI.text = (QuestController.instance.tips + QuestController.instance.cash).ToString();
     }
     public void ClosePanel(GameObject obj)
     {

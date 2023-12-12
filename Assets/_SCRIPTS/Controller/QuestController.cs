@@ -47,12 +47,12 @@ public class QuestController : MonoBehaviour
     public PhoneCanvas phonePanel;
     public TextMeshProUGUI distanceUI;
     public TextMeshProUGUI cashUI;
-    public GameObject CarSelectionCanvas;
+    public GameObject time;
 
     void Start()
     {
         questTime = PlayerPrefs.GetInt("questTime");
-
+        time.SetActive(false);
         //event
         EventController.instance.accepted += SetUp_Start_Destination_Position;
         EventController.instance.pickUpCustomer += SetDestinationPoint;
@@ -94,6 +94,17 @@ public class QuestController : MonoBehaviour
         mapRoutes.enabled = true;
         ClosePhoneNotice();
         tips = startTips;
+
+        time.SetActive(true);
+        TextMeshProUGUI text = time.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+
+        DOVirtual.Int(currentQuest.timer, 0, currentQuest.timer, t =>
+        {
+            int minutes = Mathf.FloorToInt(t / 60);
+            int seconds = Mathf.FloorToInt(t % 60);
+
+            text.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }).SetEase(Ease.Linear);
     }
     public void SetDestinationPoint()
     {
@@ -149,7 +160,7 @@ public class QuestController : MonoBehaviour
                 currentChallengeId = PlayerPrefs.GetInt("challengeId");
             }
         }
-        
+
         Invoke("CalculateDistanceAndCash", 0.5f);
     }
 
@@ -169,8 +180,8 @@ public class QuestController : MonoBehaviour
         {
             distance = (Mathf.Round(length / 100 * Mathf.Pow(10, 1)) / Mathf.Pow(10, 1));
             cash = distance * 50;
-            distanceUI.text =distance + " km";
-            cashUI.text =cash + " $";
+            distanceUI.text = distance + " km";
+            cashUI.text = cash + " $";
         }
         else
         {
@@ -178,7 +189,7 @@ public class QuestController : MonoBehaviour
             cashUI.text = "";
         }
 
-        OpenPhoneNotice();
+        //OpenPhoneNotice();
     }
     public void OpenPhoneNotice()
     {

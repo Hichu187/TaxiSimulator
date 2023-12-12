@@ -12,7 +12,7 @@ public class QuestData : ScriptableObject
     public Sprite avatar;
     public string description;
     public string customerShortText;
-    public float timer;
+    public int timer;
     public List<string> dialogues;
 
 }

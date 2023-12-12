@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
+
+    public TextMeshProUGUI cash;
     void Awake()
     {
         instance = this;
@@ -18,6 +22,9 @@ public class DataManager : MonoBehaviour
     void Start()
     {
         EventController.instance.completeTrip += CompleteQuest;
+        EventController.instance.addCash += AddCoinValue;
+
+        cash.text = PlayerPrefs.GetFloat("cash").ToString();
     }
 
     void CompleteQuest()
@@ -32,20 +39,40 @@ public class DataManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("questID", PlayerPrefs.GetInt("questID") + 1);
         }
-
     }
 
     public void AddCoinNoAds()
     {
+        int cashvalue = (int)PlayerPrefs.GetFloat("cash");
         PlayerPrefs.SetFloat("cash", PlayerPrefs.GetFloat("cash") + QuestController.instance.totalReward);
         CanvasController.instance.ClosePanel(CanvasController.instance.modeTaxiWinPanel);
+
+        DOVirtual.Int(cashvalue, (int)PlayerPrefs.GetFloat("cash"), 0.75f, c => cash.text = c.ToString());
     }
 
     public void AddCoinAds()
     {
+        int cashvalue = (int)PlayerPrefs.GetFloat("cash");
         PlayerPrefs.SetFloat("cash", PlayerPrefs.GetFloat("cash") + QuestController.instance.totalReward * 3);
         CanvasController.instance.ClosePanel(CanvasController.instance.modeTaxiWinPanel);
-        
+
+        DOVirtual.Int(cashvalue, (int)PlayerPrefs.GetFloat("cash"), 0.75f, c => cash.text = c.ToString());
+    }
+
+    public void AddCoinAdsCommon()
+    {
+        int cashvalue = (int)PlayerPrefs.GetFloat("cash");
+        PlayerPrefs.SetFloat("cash", PlayerPrefs.GetFloat("cash") + 500);
+        DOVirtual.Int(cashvalue, (int)PlayerPrefs.GetFloat("cash"), 0.75f, c => cash.text = c.ToString());
+    }
+    public void AddCoinValue(int value)
+    {
+        int cashvalue = (int)PlayerPrefs.GetFloat("cash");
+        PlayerPrefs.SetFloat("cash", PlayerPrefs.GetFloat("cash") + value);
+
+        DOVirtual.Int(cashvalue, cashvalue + value, 0.75f, c => cash.text = c.ToString());
+
+        //cash.text = PlayerPrefs.GetFloat("cash").ToString();
     }
 
 }

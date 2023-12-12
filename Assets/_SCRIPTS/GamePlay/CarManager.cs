@@ -18,7 +18,7 @@ public class CarManager : MonoBehaviour
     }
     void Start()
     {
-        EventController.instance.takeACall += DisableControlCar;
+        //EventController.instance.takeACall += DisableControlCar;
         EventController.instance.accepted += EnableControlCar;
         EventController.instance.refuse += EnableControlCar;
         EventController.instance.carStop += DisableControlCar;
