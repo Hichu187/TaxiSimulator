@@ -15,6 +15,9 @@ public class CanvasController : MonoBehaviour
     {
         instance = this;
     }
+
+    public TextMeshProUGUI damageValue;
+    public float curDamage;
     [Header("Phone Canvas")]
     public GameObject phoneIcon;
     public MinimapRenderer minimap;
@@ -33,10 +36,12 @@ public class CanvasController : MonoBehaviour
 
     void Start()
     {
+        curDamage = 100;
         EventController.instance.startGame += StartMinimap;
         EventController.instance.takeACall += TakeACall;
         EventController.instance.accepted += PickUp;
         EventController.instance.completeTrip += Complete;
+        EventController.instance.damage += DamageCheck;
 
         minimap.gameObject.SetActive(false);
     }
@@ -78,5 +83,21 @@ public class CanvasController : MonoBehaviour
     {
         obj.gameObject.SetActive(false);
         if (obj == modeChallengeWinPanel || obj == modeTaxiWinPanel) Time.timeScale = 1;
+    }
+
+    public void DamageCheck(float value)
+    {
+        float startdamage = curDamage;
+        float roundedNumber = Mathf.Round(value * Mathf.Pow(10, 0)) / Mathf.Pow(10, 0);
+        curDamage -= roundedNumber;
+
+        DOVirtual.Int((int)startdamage, (int)curDamage, 0.25f, d => { damageValue.text = d + "%"; });
+    }
+
+    public void RepairVehicle()
+    {
+        curDamage = 100;
+        damageValue.text = curDamage + "%";
+        EventController.instance.Repair();
     }
 }

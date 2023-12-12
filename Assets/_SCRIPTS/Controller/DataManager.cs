@@ -71,8 +71,6 @@ public class DataManager : MonoBehaviour
         PlayerPrefs.SetFloat("cash", PlayerPrefs.GetFloat("cash") + value);
 
         DOVirtual.Int(cashvalue, cashvalue + value, 0.75f, c => cash.text = c.ToString());
-
-        //cash.text = PlayerPrefs.GetFloat("cash").ToString();
     }
 
 }

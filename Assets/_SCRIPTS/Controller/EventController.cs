@@ -24,6 +24,10 @@ public class EventController : MonoBehaviour
     public event UnityAction<float> damage;
     public void Damage(float value) => damage?.Invoke(value);
 
+    public event UnityAction repair;
+    public void Repair() => repair?.Invoke();
+
+
     #region  Customer Quest
     public event UnityAction takeACall;
     public void TakeACall() => takeACall?.Invoke();

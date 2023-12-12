@@ -15,7 +15,6 @@ public class GameController : MonoBehaviour
     public Transform spawnPosition;
     public RCC_CarControllerV3 player;
 
-
     void Awake()
     {
         instance = this;

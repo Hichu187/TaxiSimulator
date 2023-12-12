@@ -48,6 +48,7 @@ public class QuestController : MonoBehaviour
     public TextMeshProUGUI distanceUI;
     public TextMeshProUGUI cashUI;
     public GameObject time;
+    Sequence sequence;
 
     void Start()
     {
@@ -128,6 +129,7 @@ public class QuestController : MonoBehaviour
 
     void LoadQuest()
     {
+
         line = routes.transform.GetChild(0).GetComponent<LineRenderer>();
 
         if (questTime < 2)
@@ -191,8 +193,18 @@ public class QuestController : MonoBehaviour
 
         //OpenPhoneNotice();
     }
+
+    public void AutoOpenPhone()
+    {
+        sequence.Join(DOVirtual.Int(30, 0, 30, t => { })
+        .SetEase(Ease.Linear)
+        .OnComplete(() => { OpenPhoneNotice(); }));
+
+    }
+
     public void OpenPhoneNotice()
     {
+        sequence.Kill();
         phonePanel.LoadData();
         phonePanel.gameObject.SetActive(true);
         phonePanel.transform.DOMoveY(0, 0.25f)
@@ -212,6 +224,11 @@ public class QuestController : MonoBehaviour
         .SetEase(Ease.Linear);
     }
 
+    public void ClosePhoneNoticeAdnReset()
+    {
+        ClosePhoneNotice();
+        AutoOpenPhone();
+    }
     public void VehicleHit(float damage)
     {
         if (isPickedUpCustomer)

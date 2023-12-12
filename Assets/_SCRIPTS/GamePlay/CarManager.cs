@@ -10,6 +10,7 @@ public class CarManager : MonoBehaviour
     private Rigidbody rig;
     private Animator anim;
     [SerializeField] GameObject humanModel;
+
     private void Awake()
     {
         controller = GetComponent<RCC_CarControllerV3>();
@@ -27,6 +28,8 @@ public class CarManager : MonoBehaviour
         EventController.instance.getIn += Pickup;
         EventController.instance.closeDoor += CloseDoor;
         EventController.instance.completeTrip += EnableControlCar;
+
+        EventController.instance.repair += Repair;
     }
 
     void Pickup()
@@ -52,5 +55,10 @@ public class CarManager : MonoBehaviour
     {
         controller.canControl = true;
         rig.constraints = RigidbodyConstraints.None;
+    }
+
+    public void Repair()
+    {
+        controller.Repair();
     }
 }
