@@ -91,8 +91,15 @@ public class CanvasController : MonoBehaviour
         float startdamage = curDamage;
         float roundedNumber = Mathf.Round(value * Mathf.Pow(10, 0)) / Mathf.Pow(10, 0);
         curDamage -= roundedNumber;
+        if (curDamage > 0)
+        {
+            DOVirtual.Int((int)startdamage, (int)curDamage, 0.15f, d => { damageValue.text = d + "%"; });
+        }
+        else
+        {
+            DOVirtual.Int((int)startdamage, 0, 0.15f, d => { damageValue.text = d + "%"; });
+        }
 
-        DOVirtual.Int((int)startdamage, (int)curDamage, 0.25f, d => { damageValue.text = d + "%"; });
     }
 
     public void RepairVehicle()

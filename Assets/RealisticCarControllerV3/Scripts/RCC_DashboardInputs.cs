@@ -11,12 +11,14 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using MTAssets.EasyMinimapSystem;
 
 /// <summary>
 /// Receiving inputs from active vehicle on your scene, and feeds dashboard needles, texts, images.
 /// </summary>
 [AddComponentMenu("BoneCracker Games/Realistic Car Controller/UI/RCC UI Dashboard Inputs")]
-public class RCC_DashboardInputs : MonoBehaviour {
+public class RCC_DashboardInputs : MonoBehaviour
+{
 
     public RCC_CarControllerV3 vehicle;     //  Target vehicle.
     public bool autoAssignVehicle = true;       //  Auto assign target vehicle as player vehicle from the RCC_SceneManager.
@@ -33,7 +35,8 @@ public class RCC_DashboardInputs : MonoBehaviour {
     public GameObject heatNeedle;
     public GameObject fuelGauge;
     public GameObject fuelNeedle;
-    public Image  fueltank;
+    public GameObject fueltank;
+    public List<Image> fuelTankValues;
 
     //  Needle rotations.
     private float RPMNeedleRotation = 0f;
@@ -56,7 +59,8 @@ public class RCC_DashboardInputs : MonoBehaviour {
     [HideInInspector] public bool Headlights = false;
     [HideInInspector] public RCC_CarControllerV3.IndicatorsOn indicators;
 
-    private void Update() {
+    private void Update()
+    {
 
         if (autoAssignVehicle && RCC_SceneManager.Instance.activePlayerVehicle)
             vehicle = RCC_SceneManager.Instance.activePlayerVehicle;
@@ -72,14 +76,18 @@ public class RCC_DashboardInputs : MonoBehaviour {
             return;
 
         //  If nos gauge is selected, enable or disable gauge related to vehicle. 
-        if (NOSGauge) {
+        if (NOSGauge)
+        {
 
-            if (vehicle.useNOS) {
+            if (vehicle.useNOS)
+            {
 
                 if (!NOSGauge.activeSelf)
                     NOSGauge.SetActive(true);
 
-            } else {
+            }
+            else
+            {
 
                 if (NOSGauge.activeSelf)
                     NOSGauge.SetActive(false);
@@ -89,14 +97,18 @@ public class RCC_DashboardInputs : MonoBehaviour {
         }
 
         //  If turbo gauge is selected, enable or disable turbo gauge related to vehicle.
-        if (turboGauge) {
+        if (turboGauge)
+        {
 
-            if (vehicle.useTurbo) {
+            if (vehicle.useTurbo)
+            {
 
                 if (!turboGauge.activeSelf)
                     turboGauge.SetActive(true);
 
-            } else {
+            }
+            else
+            {
 
                 if (turboGauge.activeSelf)
                     turboGauge.SetActive(false);
@@ -106,14 +118,18 @@ public class RCC_DashboardInputs : MonoBehaviour {
         }
 
         //  If heat gauge is selected, enable or disable heat gauge related to vehicle.
-        if (heatGauge) {
+        if (heatGauge)
+        {
 
-            if (vehicle.useEngineHeat) {
+            if (vehicle.useEngineHeat)
+            {
 
                 if (!heatGauge.activeSelf)
                     heatGauge.SetActive(true);
 
-            } else {
+            }
+            else
+            {
 
                 if (heatGauge.activeSelf)
                     heatGauge.SetActive(false);
@@ -123,14 +139,18 @@ public class RCC_DashboardInputs : MonoBehaviour {
         }
 
         //  If fuel gauge is selected, enable or disable fuel gauge related to vehicle.
-        if (fuelGauge) {
+        if (fuelGauge)
+        {
 
-            if (vehicle.useFuelConsumption) {
+            if (vehicle.useFuelConsumption)
+            {
 
                 if (!fuelGauge.activeSelf)
                     fuelGauge.SetActive(true);
 
-            } else {
+            }
+            else
+            {
 
                 if (fuelGauge.activeSelf)
                     fuelGauge.SetActive(false);
@@ -153,7 +173,8 @@ public class RCC_DashboardInputs : MonoBehaviour {
         indicators = vehicle.indicatorsOn;
 
         //  If RPM needle is selected, assign rotation of the needle.
-        if (RPMNeedle) {
+        if (RPMNeedle)
+        {
 
             RPMNeedleRotation = (vehicle.engineRPM / 50f);
             RPMNeedleRotation = Mathf.Clamp(RPMNeedleRotation, 0f, 180f);
@@ -162,7 +183,8 @@ public class RCC_DashboardInputs : MonoBehaviour {
         }
 
         //  If KMH needle is selected, assign rotation of the needle.
-        if (KMHNeedle) {
+        if (KMHNeedle)
+        {
 
             if (RCC_Settings.Instance.units == RCC_Settings.Units.KMH)
                 KMHNeedleRotation = (vehicle.speed);
@@ -174,7 +196,8 @@ public class RCC_DashboardInputs : MonoBehaviour {
         }
 
         //  If turbo needle is selected, assign rotation of the needle.
-        if (turboNeedle) {
+        if (turboNeedle)
+        {
 
             BoostNeedleRotation = (vehicle.turboBoost / 30f) * 270f;
             turboNeedle.transform.eulerAngles = new Vector3(turboNeedle.transform.eulerAngles.x, turboNeedle.transform.eulerAngles.y, -BoostNeedleRotation);
@@ -182,7 +205,8 @@ public class RCC_DashboardInputs : MonoBehaviour {
         }
 
         //  If nos needle is selected, assign rotation of the needle.
-        if (NoSNeedle) {
+        if (NoSNeedle)
+        {
 
             NoSNeedleRotation = (vehicle.NoS / 100f) * 270f;
             NoSNeedle.transform.eulerAngles = new Vector3(NoSNeedle.transform.eulerAngles.x, NoSNeedle.transform.eulerAngles.y, -NoSNeedleRotation);
@@ -190,7 +214,8 @@ public class RCC_DashboardInputs : MonoBehaviour {
         }
 
         //  If heat needle is selected, assign rotation of the needle.
-        if (heatNeedle) {
+        if (heatNeedle)
+        {
 
             heatNeedleRotation = (vehicle.engineHeat / 110f) * 270f;
             heatNeedle.transform.eulerAngles = new Vector3(heatNeedle.transform.eulerAngles.x, heatNeedle.transform.eulerAngles.y, -heatNeedleRotation);
@@ -198,13 +223,37 @@ public class RCC_DashboardInputs : MonoBehaviour {
         }
 
         //  If fuel needle is selected, assign rotation of the needle.
-        if (fuelNeedle) {
+        if (fuelNeedle)
+        {
 
             fuelNeedleRotation = (vehicle.fuelTank / vehicle.fuelTankCapacity) * 270f;
             fuelNeedle.transform.eulerAngles = new Vector3(fuelNeedle.transform.eulerAngles.x, fuelNeedle.transform.eulerAngles.y, -fuelNeedleRotation);
 
         }
-        if(fueltank){
+        if (fueltank)
+        {
+            switch (vehicle.fuelTank / vehicle.fuelTankCapacity *100)
+            {
+                case float v when v > 80:
+                    fuelTankValues[4].fillAmount = ((v-80 )/ 20);
+                    break;
+                case float v when v > 60:
+                    fuelTankValues[4].fillAmount = 0;
+                    fuelTankValues[3].fillAmount = ((v-60 )/ 20);
+                    break;
+                case float v when v > 40:
+                    fuelTankValues[3].fillAmount = 0;
+                    fuelTankValues[2].fillAmount = ((v-40)/ 20);
+                    break;
+                case float v when v > 20:
+                    fuelTankValues[2].fillAmount = 0;
+                    fuelTankValues[1].fillAmount = ((v-20) / 20);
+                    break;
+                case float v when v > 0:
+                    fuelTankValues[1].fillAmount = 0;
+                    fuelTankValues[0].fillAmount = (v / 20);
+                    break;
+            }
         }
 
     }

@@ -84,6 +84,7 @@ public class QuestController : MonoBehaviour
             .OnComplete(() =>
             {
                 LoadQuest(); EventController.instance.TakeACall();
+                AutoOpenPhone();
             });
     }
 
@@ -195,12 +196,12 @@ public class QuestController : MonoBehaviour
         //OpenPhoneNotice();
     }
 
-    // public void AutoOpenPhone()
-    // {
-    //     sequence.Join(DOVirtual.Int(cooldown, 0, cooldown, t => { })
-    //     .SetEase(Ease.Linear)
-    //     .OnComplete(() => { OpenPhoneNotice(); }));
-    // }
+    public void AutoOpenPhone()
+    {
+        sequence.Join(DOVirtual.Int(cooldown, 0, cooldown, t => { })
+        .SetEase(Ease.Linear)
+        .OnComplete(() => { OpenPhoneNotice(); }));
+    }
 
     public void OpenPhoneNotice()
     {
