@@ -42,6 +42,7 @@ public class CanvasController : MonoBehaviour
         EventController.instance.accepted += PickUp;
         EventController.instance.completeTrip += Complete;
         EventController.instance.damage += DamageCheck;
+        EventController.instance.refuse += PickUp;
 
         minimap.gameObject.SetActive(false);
     }

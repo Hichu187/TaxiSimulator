@@ -48,6 +48,7 @@ public class QuestController : MonoBehaviour
     public TextMeshProUGUI distanceUI;
     public TextMeshProUGUI cashUI;
     public GameObject time;
+    public int cooldown = 60;
     Sequence sequence;
 
     void Start()
@@ -194,13 +195,12 @@ public class QuestController : MonoBehaviour
         //OpenPhoneNotice();
     }
 
-    public void AutoOpenPhone()
-    {
-        sequence.Join(DOVirtual.Int(30, 0, 30, t => { })
-        .SetEase(Ease.Linear)
-        .OnComplete(() => { OpenPhoneNotice(); }));
-
-    }
+    // public void AutoOpenPhone()
+    // {
+    //     sequence.Join(DOVirtual.Int(cooldown, 0, cooldown, t => { })
+    //     .SetEase(Ease.Linear)
+    //     .OnComplete(() => { OpenPhoneNotice(); }));
+    // }
 
     public void OpenPhoneNotice()
     {
@@ -227,7 +227,7 @@ public class QuestController : MonoBehaviour
     public void ClosePhoneNoticeAdnReset()
     {
         ClosePhoneNotice();
-        AutoOpenPhone();
+        //AutoOpenPhone();
     }
     public void VehicleHit(float damage)
     {
