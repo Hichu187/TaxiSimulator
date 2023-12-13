@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using GleyTrafficSystem;
 using MTAssets.EasyMinimapSystem;
+using Unity.Burst.Intrinsics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -46,7 +47,14 @@ public class GameController : MonoBehaviour
     void SetupMinimapRenderer()
     {
         minimapRenderer.SetActive(true);
+    }
 
+    public void ResetCar()
+    {
+        Vector3 resetpos = player.transform.position + 2*Vector3.up;
+
+        player.transform.position = resetpos;
+        player.transform.rotation = Quaternion.Euler(Vector3.zero);
     }
 
 }
