@@ -7,7 +7,7 @@ public class VibrationControl : MonoBehaviour
     void Start()
     {
         EventController.instance.addCash += MiniVibration;
-        EventController.instance.takeACall += MediumVibration;
+        EventController.instance.takeACall += LongVibration;
     }
 
 

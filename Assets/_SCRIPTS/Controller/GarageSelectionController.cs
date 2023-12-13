@@ -12,6 +12,10 @@ public class GarageSelectionController : MonoBehaviour
     public List<VehicleData> vehicleDatas;
     [SerializeField] GameObject item;
     public List<GameObject> btns;
+    public Sprite backgroundItem;
+    public Sprite border;
+    public Sprite normalBg;
+    public Sprite normalborder;
     private void Awake()
     {
         for (int i = 0; i < _spawnedVehicles.Count; i++)
@@ -41,48 +45,29 @@ public class GarageSelectionController : MonoBehaviour
 
     private void CreateVehicles()
     {
-        // for (int i = 0; i <= RCC_DemoVehicles.Instance.vehicles.Length; i++)
-        // {
-        //     // Spawning the vehicle with no controllable, no player, and engine off. We don't want to let player control the vehicle while in selection menu.
-        //     RCC_CarControllerV3 spawnedVehicle = RCC.SpawnRCC(Vehicles.Instance.vehicles[i], spawnPosition.position, spawnPosition.rotation, false, false, false);
-
-        //     // Disabling spawned vehicle. 
-        //     spawnedVehicle.transform.parent = spawnPosition;
-        //     spawnedVehicle.gameObject.SetActive(false);
-
-        //     // Adding and storing it in _spawnedVehicles list.
-        //     _spawnedVehicles.Add(spawnedVehicle);
-        // }
         SpawnVehicle();
     }
-    // public void NextVehicle()
-    // {
-    //     selectedIndex++;
-    //     // If index exceeds maximum, return to 0.
-    //     if (selectedIndex > _spawnedVehicles.Count - 1)
-    //         selectedIndex = 0;
-    //     SpawnVehicle();
-    // }
-
-    // public void PreviousVehicle()
-    // {
-    //     selectedIndex--;
-    //     // If index is below 0, return to maximum.
-    //     if (selectedIndex < 0)
-    //         selectedIndex = _spawnedVehicles.Count - 1;
-    //     SpawnVehicle();
-    // }
 
     public void SpawnVehicleByID(GameObject btn)
     {
         int id = btns.IndexOf(btn);
 
         for (int i = 0; i < _spawnedVehicles.Count; i++)
+        {
+            btns[i].GetComponent<Image>().sprite = normalBg;
+            btns[i].transform.GetChild(2).GetComponent<Image>().sprite = normalborder;
+            btns[i].transform.GetChild(2).GetChild(0).gameObject.SetActive(false);
             _spawnedVehicles[i].gameObject.SetActive(false);
+        }
 
         // And enabling only selected vehicle.
         _spawnedVehicles[id].gameObject.SetActive(true);
         selectedIndex = id;
+        btns[id].GetComponent<Image>().sprite = backgroundItem;
+        btns[id].transform.GetChild(2).GetComponent<Image>().sprite = border;
+        btns[id].transform.GetChild(2).GetChild(0).gameObject.SetActive(true);
+        Debug.Log(btn.name);
+
     }
 
     public void SpawnVehicle()
@@ -100,7 +85,6 @@ public class GarageSelectionController : MonoBehaviour
     {
         // Save the selected vehicle for instantianting it on next scene.
         PlayerPrefs.SetInt("selectedVehicel", selectedIndex);
-
         //Scene Control
     }
 
