@@ -3337,7 +3337,7 @@ MonoBehaviour:
   SteeringWheel: {fileID: 0}
   steeringWheelRotateAround: 2
   steeringWheelAngleMultiplier: 11
-  wheelTypeChoise: 1
+  wheelTypeChoise: 2
   externalController: 0
   steeringType: 1
   steerAngleCurve:
@@ -3382,9 +3382,9 @@ MonoBehaviour:
   COM: {fileID: 6239930366628478574}
   COMAssister: 0
   brakeTorque: 8500
-  downForce: 45
+  downForce: 60
   speed: 0
-  maxspeed: 360
+  maxspeed: 315
   engineTorqueCurve:
     serializedVersion: 2
     m_Curve:
@@ -3427,7 +3427,7 @@ MonoBehaviour:
   engineRPMRaw: 0
   engineInertia: 0.02
   useRevLimiter: 1
-  useExhaustFlame: 1
+  useExhaustFlame: 0
   RunEngineAtAwake: 1
   engineRunning: 0
   useSteeringLimiter: 1
@@ -3466,10 +3466,10 @@ MonoBehaviour:
     maxSpeed: 285
     targetSpeedForNextGear: 215
   - maxRatio: 0.9
-    maxSpeed: 320
+    maxSpeed: 300
     targetSpeedForNextGear: 251
   - maxRatio: 0.72
-    maxSpeed: 360
+    maxSpeed: 315
     targetSpeedForNextGear: 287
   totalGears: 8
   currentGear: 0
@@ -3478,7 +3478,7 @@ MonoBehaviour:
   gearShiftingDelay: 0.001
   gearShiftingThreshold: 0.9
   clutchInertia: 0.25
-  gearShiftUpRPM: 11000
+  gearShiftUpRPM: 10500
   gearShiftDownRPM: 9000
   changingGear: 0
   direction: 1
@@ -3588,8 +3588,8 @@ MonoBehaviour:
   overSteering: 0
   turboBoost: 0
   NoS: 100
-  useNOS: 1
-  useTurbo: 1
+  useNOS: 0
+  useTurbo: 0
   attachedTrailer: {fileID: 0}
 --- !u!114 &5918883112021666301
 MonoBehaviour:

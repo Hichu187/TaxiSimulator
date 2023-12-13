@@ -641,33 +641,33 @@ MonoBehaviour:
   brakeTorque: 3500
   downForce: 50
   speed: 0
-  maxspeed: 300
+  maxspeed: 278
   engineTorqueCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 1000
-      value: 237.5
-      inSlope: 0.049479168
-      outSlope: 0.049479168
+      time: 2000
+      value: 300
+      inSlope: 0.078947365
+      outSlope: 0.078947365
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 5800
-      value: 475
-      inSlope: -0.009680709
-      outSlope: -0.009680709
+      value: 600
+      inSlope: 0.020605758
+      outSlope: 0.020605758
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 8100
-      value: 316.66666
-      inSlope: -0.068840586
-      outSlope: -0.068840586
+      time: 11100
+      value: 400
+      inSlope: -0.03773585
+      outSlope: -0.03773585
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -676,15 +676,15 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
-  maxEngineTorque: 475
+  maxEngineTorque: 600
   maxEngineTorqueAtRPM: 5800
-  minEngineRPM: 1000
-  maxEngineRPM: 8100
+  minEngineRPM: 2000
+  maxEngineRPM: 11100
   engineRPM: 0
   engineRPMRaw: 0
   engineInertia: 0.2
   useRevLimiter: 1
-  useExhaustFlame: 1
+  useExhaustFlame: 0
   RunEngineAtAwake: 1
   engineRunning: 0
   useSteeringLimiter: 1
@@ -698,7 +698,7 @@ MonoBehaviour:
   fuelTankCapacity: 62
   fuelTank: 62
   fuelConsumptionRate: 0.1
-  useEngineHeat: 1
+  useEngineHeat: 0
   engineHeat: 15
   engineCoolingWaterThreshold: 90
   engineHeatRate: 1
@@ -720,13 +720,13 @@ MonoBehaviour:
     maxSpeed: 225
     targetSpeedForNextGear: 180
   - maxRatio: 0.9
-    maxSpeed: 262
+    maxSpeed: 240
     targetSpeedForNextGear: 210
   - maxRatio: 0.72
-    maxSpeed: 300
+    maxSpeed: 260
     targetSpeedForNextGear: 240
   - maxRatio: 0.72
-    maxSpeed: 300
+    maxSpeed: 278
     targetSpeedForNextGear: 240
   totalGears: 8
   currentGear: 0
@@ -735,7 +735,7 @@ MonoBehaviour:
   gearShiftingDelay: 0.001
   gearShiftingThreshold: 1
   clutchInertia: 0.25
-  gearShiftUpRPM: 6800
+  gearShiftUpRPM: 4800
   gearShiftDownRPM: 3750
   changingGear: 0
   direction: 1
@@ -845,8 +845,8 @@ MonoBehaviour:
   overSteering: 0
   turboBoost: 0
   NoS: 100
-  useNOS: 1
-  useTurbo: 1
+  useNOS: 0
+  useTurbo: 0
   attachedTrailer: {fileID: 0}
 --- !u!114 &-4401262500824501157
 MonoBehaviour:
