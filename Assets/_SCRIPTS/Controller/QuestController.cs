@@ -49,6 +49,7 @@ public class QuestController : MonoBehaviour
     public TextMeshProUGUI cashUI;
     public GameObject time;
     public int cooldown = 60;
+    private int timerQuest;
     Sequence sequence;
 
     void Start()
@@ -83,7 +84,8 @@ public class QuestController : MonoBehaviour
             .SetEase(Ease.Linear)
             .OnComplete(() =>
             {
-                LoadQuest(); EventController.instance.TakeACall();
+                EventController.instance.TakeACall();
+                LoadQuest();
                 AutoOpenPhone();
             });
     }
@@ -100,14 +102,20 @@ public class QuestController : MonoBehaviour
 
         time.SetActive(true);
         TextMeshProUGUI text = time.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-
+        text.color = Color.cyan;
         DOVirtual.Int(currentQuest.timer, 0, currentQuest.timer, t =>
         {
+            timerQuest = t;
             int minutes = Mathf.FloorToInt(t / 60);
             int seconds = Mathf.FloorToInt(t % 60);
 
             text.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        }).SetEase(Ease.Linear);
+        }).SetEase(Ease.Linear)
+        .OnComplete(() =>
+        {
+            text.color = Color.red;
+        });
+        sequence.Kill();
     }
     public void SetDestinationPoint()
     {
@@ -123,6 +131,7 @@ public class QuestController : MonoBehaviour
     {
         isPickedUpCustomer = false;
         mapRoutes.enabled = false;
+        time.SetActive(false);
         //reward
         QualityCheck();
         totalReward = cash + tips;
@@ -131,7 +140,6 @@ public class QuestController : MonoBehaviour
 
     void LoadQuest()
     {
-
         line = routes.transform.GetChild(0).GetComponent<LineRenderer>();
 
         if (questTime < 2)
@@ -192,12 +200,11 @@ public class QuestController : MonoBehaviour
             distanceUI.text = "";
             cashUI.text = "";
         }
-
-        //OpenPhoneNotice();
     }
 
     public void AutoOpenPhone()
     {
+        sequence = DOTween.Sequence();
         sequence.Join(DOVirtual.Int(cooldown, 0, cooldown, t => { })
         .SetEase(Ease.Linear)
         .OnComplete(() => { OpenPhoneNotice(); }));
@@ -205,30 +212,29 @@ public class QuestController : MonoBehaviour
 
     public void OpenPhoneNotice()
     {
-        sequence.Kill();
         phonePanel.LoadData();
         phonePanel.gameObject.SetActive(true);
         phonePanel.transform.DOMoveY(0, 0.25f)
         .SetEase(Ease.Linear);
+        TimeController.instance.SlowGame();
     }
     public void AcceptedCall()
     {
         phonePanel.transform.DOMoveY(-1000, 0.5f)
         .OnComplete(() => { phonePanel.gameObject.SetActive(false); })
         .SetEase(Ease.Linear);
-
     }
     public void ClosePhoneNotice()
     {
         phonePanel.transform.DOMoveY(-1000, 0.5f)
         .OnComplete(() => { phonePanel.gameObject.SetActive(false); })
         .SetEase(Ease.Linear);
+        TimeController.instance.ResumeGame();
     }
 
     public void ClosePhoneNoticeAdnReset()
     {
         ClosePhoneNotice();
-        //AutoOpenPhone();
     }
     public void VehicleHit(float damage)
     {
@@ -239,7 +245,6 @@ public class QuestController : MonoBehaviour
             Debug.Log(hitTime);
             QualityCheck();
         }
-
     }
 
     void QualityCheck()
@@ -247,7 +252,8 @@ public class QuestController : MonoBehaviour
         switch (hitTime)
         {
             case 0:
-                quality = RideQuality.Happy;
+                if (timerQuest > 0) quality = RideQuality.Happy;
+                else quality = RideQuality.Good;
                 break;
             case int n when n <= 3 && n > 0:
                 quality = RideQuality.Good;

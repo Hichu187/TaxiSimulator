@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5995316480349405596}
   - component: {fileID: 2098664996257263272}
   - component: {fileID: 5244115191854849010}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: fire_truck_Wheel_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,11 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229330599675290149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.69402665, y: 0.40164733, z: 1.7878971}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.00076923077, y: 0.00076923077, z: 0.00076923077}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2754055506524334212}
+  m_Father: {fileID: 234010891266364450}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2098664996257263272
@@ -83,7 +83,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &2754055505591259622
+--- !u!1 &702470440752039136
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,43 +91,62 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2754055505591259623}
-  - component: {fileID: 2754055505591259620}
+  - component: {fileID: 1879254056291327344}
   m_Layer: 14
-  m_Name: FrontTrigger
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2754055505591259623
+--- !u!4 &1879254056291327344
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2754055505591259622}
+  m_GameObject: {fileID: 702470440752039136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.59, z: 2.87}
-  m_LocalScale: {x: 0.78, y: 0.78, z: 0.78}
+  m_LocalPosition: {x: 0, y: 0.3132849, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2754055507466852313}
+  m_Children:
+  - {fileID: 2874745146411697739}
+  m_Father: {fileID: 2754055506419551095}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2754055505591259620
-BoxCollider:
+--- !u!1 &2603901971292849876
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2754055505591259622}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0690625, y: 1, z: 4.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5628216270955363790}
+  m_Layer: 14
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5628216270955363790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2603901971292849876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3132849, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3436271294076179668}
+  m_Father: {fileID: 2754055506022726903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2754055505639216842
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,13 +171,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2754055505639216842}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5413403, y: 0, z: 1.3945597}
   m_LocalScale: {x: 0.78, y: 0.78, z: 0.78}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 148243343128325294}
+  - {fileID: 7369831817630732186}
   m_Father: {fileID: 2754055506024776057}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2754055505952788732
 GameObject:
@@ -170,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2754055505952788733}
   - component: {fileID: 2754055505952788730}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BodyCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,8 +222,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1, z: 5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.3274326, y: 1.1495584, z: 4.9079638}
+  m_Center: {x: -0.0057522357, y: 0.1668151, z: 0.01150465}
 --- !u!1 &2754055506022726902
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,11 +248,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2754055506022726902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4456015, y: 0, z: -1.187807}
   m_LocalScale: {x: 0.78, y: 0.78, z: 0.78}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3436271294076179668}
+  - {fileID: 5628216270955363790}
   m_Father: {fileID: 2754055506024776057}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -246,7 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2754055506024776057}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,9 +284,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2754055505639216843}
   - {fileID: 2754055506524334212}
   - {fileID: 2754055506419551095}
-  - {fileID: 2754055505639216843}
   - {fileID: 2754055506022726903}
   m_Father: {fileID: 2754055506290824582}
   m_RootOrder: 0
@@ -281,7 +300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2754055506290824582}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: CarHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,14 +315,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2754055506290824313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.10337639}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2754055506024776057}
   - {fileID: 2754055506855043202}
   - {fileID: 2754055507030509610}
-  - {fileID: 2754055507466852313}
+  - {fileID: 9173414024986195272}
   m_Father: {fileID: 2754055506806406590}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -331,13 +350,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2754055506419551094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.4456015, y: 0, z: -1.187807}
   m_LocalScale: {x: 0.78, y: 0.78, z: 0.78}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2874745146411697739}
+  - {fileID: 1879254056291327344}
   m_Father: {fileID: 2754055506024776057}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2754055506524334215
 GameObject:
@@ -363,13 +382,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2754055506524334215}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5413403, y: 0, z: 1.3945597}
   m_LocalScale: {x: 0.78, y: 0.78, z: 0.78}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5995316480349405596}
+  - {fileID: 234010891266364450}
   m_Father: {fileID: 2754055506024776057}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2754055506729909381
 GameObject:
@@ -380,7 +399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2754055506729909378}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +432,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2754055506806406590}
   - component: {fileID: 2754055506806406577}
-  m_Layer: 0
+  - component: {fileID: 7286922576181391745}
+  m_Layer: 14
   m_Name: Fire Truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,6 +472,65 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7286922576181391745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2754055506806406579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553b295576fe05b438789855a6cd979c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2754055506806406577}
+  carHolder: {fileID: 2754055506290824582}
+  allWheels:
+  - wheelTransform: {fileID: 2754055505639216843}
+    wheelGraphics: {fileID: 7369831817630732186}
+    wheelPosition: 0
+    wheelRadius: 0.31941918
+    wheelCircumference: 2.00697
+    raycastLength: 0.47912878
+    maxSuspension: 0.15970959
+  - wheelTransform: {fileID: 2754055506524334212}
+    wheelGraphics: {fileID: 234010891266364450}
+    wheelPosition: 0
+    wheelRadius: 0.31941918
+    wheelCircumference: 2.00697
+    raycastLength: 0.47912878
+    maxSuspension: 0.15970959
+  - wheelTransform: {fileID: 2754055506419551095}
+    wheelGraphics: {fileID: 1879254056291327344}
+    wheelPosition: 1
+    wheelRadius: 0.3194192
+    wheelCircumference: 2.0069702
+    raycastLength: 0.4791288
+    maxSuspension: 0.1597096
+  - wheelTransform: {fileID: 2754055506022726903}
+    wheelGraphics: {fileID: 5628216270955363790}
+    wheelPosition: 1
+    wheelRadius: 0.31941912
+    wheelCircumference: 2.0069695
+    raycastLength: 0.47912866
+    maxSuspension: 0.15970956
+  frontTrigger: {fileID: 9173414024986195272}
+  shadowHolder: {fileID: 0}
+  vehicleType: 0
+  maxSuspension: 0
+  suspensionPosition: 0.5
+  maxSteer: 30
+  minPossibleSpeed: 10
+  maxPossibleSpeed: 80
+  accelerationTime: 10
+  brakeTime: 3
+  safeDistance: 41.914616
+  overtakeDistance: 20.957308
+  length: 5.239327
+  coliderHeight: 1.1495585
+  wheelDistance: 0.10337639
+  visibilityScript: {fileID: 1525929406919246745}
 --- !u!1 &2754055506855043205
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2754055506855043202}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2754055507030509610}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,38 +595,6 @@ Transform:
   m_Father: {fileID: 2754055506290824582}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2754055507466852312
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2754055507466852313}
-  m_Layer: 0
-  m_Name: FrontTriggerHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2754055507466852313
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2754055507466852312}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2754055505591259623}
-  m_Father: {fileID: 2754055506290824582}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3088589539228135780
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +606,7 @@ GameObject:
   - component: {fileID: 2874745146411697739}
   - component: {fileID: 5204398709746437272}
   - component: {fileID: 8913104036014156423}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: fire_truck_Wheel_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,11 +621,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3088589539228135780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.57128394, y: 0.40164718, z: -1.5228295}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.00076923077, y: 0.00076923077, z: 0.00076923077}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2754055506419551095}
+  m_Father: {fileID: 1879254056291327344}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5204398709746437272
@@ -642,7 +689,7 @@ GameObject:
   - component: {fileID: 2428257795192447016}
   - component: {fileID: 1593495866193997709}
   - component: {fileID: 3601132877587880775}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: fire_truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,6 +765,102 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3524428604729545357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7369831817630732186}
+  m_Layer: 14
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7369831817630732186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524428604729545357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3132849, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 148243343128325294}
+  m_Father: {fileID: 2754055505639216843}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4162216612805431642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 234010891266364450}
+  m_Layer: 14
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &234010891266364450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4162216612805431642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.3132849, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5995316480349405596}
+  m_Father: {fileID: 2754055506524334212}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4796282067889075005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9173414024986195272}
+  m_Layer: 14
+  m_Name: FrontTriggerHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9173414024986195272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796282067889075005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.49347088, y: 0, z: 0.10337639}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1248122068125374015}
+  m_Father: {fileID: 2754055506290824582}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4806979096445401261
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +872,8 @@ GameObject:
   - component: {fileID: 148243343128325294}
   - component: {fileID: 8082073040816965540}
   - component: {fileID: 1661922341668558475}
-  m_Layer: 0
+  - component: {fileID: 1525929406919246745}
+  m_Layer: 14
   m_Name: fire_truck_Wheel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -744,11 +888,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4806979096445401261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.69402605, y: 0.40164733, z: 1.7878971}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.00076923077, y: 0.00076923077, z: 0.00076923077}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2754055505639216843}
+  m_Father: {fileID: 7369831817630732186}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8082073040816965540
@@ -801,6 +945,63 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1525929406919246745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4806979096445401261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f169b5c4fd8eb6498fcf7c875df2abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5537655868101522769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248122068125374015}
+  - component: {fileID: 8903037128105141700}
+  m_Layer: 14
+  m_Name: FrontTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1248122068125374015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537655868101522769}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 2.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9173414024986195272}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8903037128105141700
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537655868101522769}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6246396, y: 1, z: 4.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7491778986102589968
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,7 +1013,7 @@ GameObject:
   - component: {fileID: 3436271294076179668}
   - component: {fileID: 1509339795947364604}
   - component: {fileID: 5722794999741452325}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: fire_truck_Wheel_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,11 +1028,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7491778986102589968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.57128394, y: 0.40164724, z: -1.5228295}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.00076923077, y: 0.00076923077, z: 0.00076923077}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2754055506022726903}
+  m_Father: {fileID: 5628216270955363790}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1509339795947364604

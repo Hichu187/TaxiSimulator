@@ -9,6 +9,7 @@ public class DataManager : MonoBehaviour
     public static DataManager instance;
 
     public TextMeshProUGUI cash;
+    public int cashvalue;
     void Awake()
     {
         instance = this;
@@ -29,8 +30,6 @@ public class DataManager : MonoBehaviour
 
     void CompleteQuest()
     {
-
-
         if (PlayerPrefs.GetInt("questID") >= 7)
         {
             PlayerPrefs.SetInt("questID", 0);
@@ -49,7 +48,6 @@ public class DataManager : MonoBehaviour
 
         DOVirtual.Int(cashvalue, (int)PlayerPrefs.GetFloat("cash"), 0.75f, c => cash.text = c.ToString());
     }
-
     public void AddCoinAds()
     {
         int cashvalue = (int)PlayerPrefs.GetFloat("cash");
@@ -58,7 +56,6 @@ public class DataManager : MonoBehaviour
 
         DOVirtual.Int(cashvalue, (int)PlayerPrefs.GetFloat("cash"), 0.75f, c => cash.text = c.ToString());
     }
-
     public void AddCoinAdsCommon()
     {
         int cashvalue = (int)PlayerPrefs.GetFloat("cash");
@@ -72,5 +69,4 @@ public class DataManager : MonoBehaviour
 
         DOVirtual.Int(cashvalue, cashvalue + value, 0.75f, c => cash.text = c.ToString());
     }
-
 }
