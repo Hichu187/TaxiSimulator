@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9001366080218828696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: COM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3426451743692288166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: COM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 255404836180012528}
   - component: {fileID: 5773089298567720427}
   - component: {fileID: 5487707604434697941}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Hood_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1106,7 +1106,7 @@ GameObject:
   - component: {fileID: 6564850716401270734}
   - component: {fileID: 2137024608441981039}
   - component: {fileID: 1424194037152865526}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: FBumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1450,7 +1450,7 @@ GameObject:
   - component: {fileID: 5283450088458609364}
   - component: {fileID: 902599897736491212}
   - component: {fileID: 3228755102090883702}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: RDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3188,7 +3188,7 @@ WheelCollider:
     damper: 5500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
-  m_ForceAppPointDistance: 0.15
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -3356,7 +3356,7 @@ WheelCollider:
     damper: 5500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
-  m_ForceAppPointDistance: 0.15
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -3838,7 +3838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9046355892377441377}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: COM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3939,7 +3939,7 @@ WheelCollider:
     damper: 5500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
-  m_ForceAppPointDistance: 0.15
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -4752,7 +4752,7 @@ GameObject:
   - component: {fileID: 8345456784885888737}
   - component: {fileID: 8256869092387261401}
   - component: {fileID: 3145707679608040294}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: RBumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5155,7 +5155,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7538765482919494437}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 1.32, z: 0}
   m_LocalScale: {x: 0.56, y: 0.56, z: 0.56}
   m_ConstrainProportionsScale: 1
@@ -5263,18 +5263,18 @@ MonoBehaviour:
   antiRollVertical: 0
   COM: {fileID: 7347957941100510946}
   COMAssister: 0
-  brakeTorque: 2000
-  downForce: 25
+  brakeTorque: 3700
+  downForce: 30
   speed: 0
-  maxspeed: 240
+  maxspeed: 205
   engineTorqueCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 800
+      time: 900
       value: 150
-      inSlope: 0.031914894
-      outSlope: 0.031914894
+      inSlope: 0.032608695
+      outSlope: 0.032608695
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -5282,17 +5282,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 5500
       value: 300
-      inSlope: -0.017375888
-      outSlope: -0.017375888
+      inSlope: 0.0020186333
+      outSlope: 0.0020186333
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 7000
+      time: 9000
       value: 200
-      inSlope: -0.06666667
-      outSlope: -0.06666667
+      inSlope: -0.028571429
+      outSlope: -0.028571429
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -5303,13 +5303,13 @@ MonoBehaviour:
   autoGenerateEngineRPMCurve: 1
   maxEngineTorque: 300
   maxEngineTorqueAtRPM: 5500
-  minEngineRPM: 800
-  maxEngineRPM: 7000
+  minEngineRPM: 900
+  maxEngineRPM: 9000
   engineRPM: 0
   engineRPMRaw: 0
   engineInertia: 0.15
   useRevLimiter: 1
-  useExhaustFlame: 1
+  useExhaustFlame: 0
   RunEngineAtAwake: 1
   engineRunning: 0
   useSteeringLimiter: 1
@@ -5319,10 +5319,10 @@ MonoBehaviour:
   steeringSensitivityFactor: 1
   oldSteeringInput: 0
   steeringDifference: 0
-  useFuelConsumption: 0
+  useFuelConsumption: 1
   fuelTankCapacity: 62
   fuelTank: 62
-  fuelConsumptionRate: 0.1
+  fuelConsumptionRate: 0.2
   useEngineHeat: 0
   engineHeat: 15
   engineCoolingWaterThreshold: 90
@@ -5333,28 +5333,28 @@ MonoBehaviour:
     maxSpeed: 40
     targetSpeedForNextGear: 30
   - maxRatio: 2.5
-    maxSpeed: 80
+    maxSpeed: 70
     targetSpeedForNextGear: 60
   - maxRatio: 1.66
-    maxSpeed: 120
+    maxSpeed: 100
     targetSpeedForNextGear: 90
   - maxRatio: 1.23
-    maxSpeed: 160
+    maxSpeed: 140
     targetSpeedForNextGear: 120
   - maxRatio: 1
-    maxSpeed: 200
+    maxSpeed: 170
     targetSpeedForNextGear: 150
   - maxRatio: 0.85
-    maxSpeed: 240
+    maxSpeed: 205
     targetSpeedForNextGear: 180
   totalGears: 6
   currentGear: 0
   NGear: 0
   finalRatio: 3.23
-  gearShiftingDelay: 0
-  gearShiftingThreshold: 0.75
-  clutchInertia: 0.25
-  gearShiftUpRPM: 6500
+  gearShiftingDelay: 0.001
+  gearShiftingThreshold: 0.9
+  clutchInertia: 0.75
+  gearShiftUpRPM: 4500
   gearShiftDownRPM: 3500
   changingGear: 0
   direction: 1
@@ -5445,15 +5445,15 @@ MonoBehaviour:
   ESP: 1
   steeringHelper: 1
   tractionHelper: 1
-  angularDragHelper: 0
+  angularDragHelper: 1
   ABSThreshold: 0.35
   TCSStrength: 0.5
   ESPThreshold: 0.5
   ESPStrength: 0.25
-  steerHelperLinearVelStrength: 0.1
-  steerHelperAngularVelStrength: 0.1
-  tractionHelperStrength: 0.1
-  angularDragHelperStrength: 0.1
+  steerHelperLinearVelStrength: 1
+  steerHelperAngularVelStrength: 1
+  tractionHelperStrength: 1
+  angularDragHelperStrength: 1
   ABSAct: 0
   TCSAct: 0
   ESPAct: 0
@@ -5663,7 +5663,7 @@ GameObject:
   - component: {fileID: 8796628697480030495}
   - component: {fileID: 6442087684844498701}
   - component: {fileID: 9171017204403679621}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: LDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5844,7 +5844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3423170060904794369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: COM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6027,7 +6027,7 @@ WheelCollider:
     damper: 5500
     targetPosition: 0.5
   m_SuspensionDistance: 0.25
-  m_ForceAppPointDistance: 0.15
+  m_ForceAppPointDistance: 0
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -6157,7 +6157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6406190742629833263}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: COM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
