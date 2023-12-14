@@ -19,24 +19,27 @@ public class AudioController : MonoBehaviour
     public AudioClip completefx;
     public AudioClip ping;
     public AudioClip mess;
+    public List<AudioClip> passegerTask1;
+    public List<AudioClip> passegerTask2;
     void Start()
     {
         if (!PlayerPrefs.HasKey("musicValue")) PlayerPrefs.SetFloat("musicValue", 1);
         if (!PlayerPrefs.HasKey("soundValue")) PlayerPrefs.SetFloat("soundValue", 1);
 
-        musicSlider.value = PlayerPrefs.GetFloat("musicValue") / 2;
+        musicSlider.value = PlayerPrefs.GetFloat("musicValue") / 2.5f;
         soundSlider.value = PlayerPrefs.GetFloat("soundValue");
         setupAudio();
 
         EventController.instance.startGame += setupAudio;
         EventController.instance.takeACall += PhoneNotice;
+        EventController.instance.openPhone += PassengerTalk1;
     }
 
     void Update()
     {
         if (settingPanel)
         {
-            musicSpeaker.volume = musicSlider.value / 2;
+            musicSpeaker.volume = musicSlider.value / 2.5f;
 
             foreach (AudioSource spk in soundSpeaker)
             {
@@ -73,6 +76,11 @@ public class AudioController : MonoBehaviour
 
     void PassengerTalk1()
     {
+        Invoke("talk",0.5f);
+    }
 
+    void talk()
+    {
+        soundfx.PlayOneShot(passegerTask1[PlayerPrefs.GetInt("questID")]);
     }
 }

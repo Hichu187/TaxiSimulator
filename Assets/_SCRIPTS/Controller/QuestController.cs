@@ -217,6 +217,7 @@ public class QuestController : MonoBehaviour
         phonePanel.transform.DOMoveY(0, 0.25f)
         .SetEase(Ease.Linear);
         TimeController.instance.SlowGame();
+        EventController.instance.OpenPhone();
     }
     public void AcceptedCall()
     {

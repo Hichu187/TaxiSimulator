@@ -31,6 +31,8 @@ public class EventController : MonoBehaviour
     #region  Customer Quest
     public event UnityAction takeACall;
     public void TakeACall() => takeACall?.Invoke();
+    public event UnityAction openPhone;
+    public void OpenPhone() => openPhone?.Invoke();
     public event UnityAction accepted;
     public void AcceptedCall() => accepted?.Invoke();
     public event UnityAction refuse;
