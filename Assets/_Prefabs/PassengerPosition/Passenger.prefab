@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5032513175165983143, guid: b40d7761d481aa647b4e2166a17c55fa, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 8719675599808918886}
     - target: {fileID: 5445842265052477565, guid: b40d7761d481aa647b4e2166a17c55fa, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -224,5 +228,10 @@ PrefabInstance:
 --- !u!4 &728017829186907671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2017535831808549312, guid: b40d7761d481aa647b4e2166a17c55fa, type: 3}
+  m_PrefabInstance: {fileID: 1289659508985171927}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8719675599808918886 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7559090488113134257, guid: b40d7761d481aa647b4e2166a17c55fa, type: 3}
   m_PrefabInstance: {fileID: 1289659508985171927}
   m_PrefabAsset: {fileID: 0}

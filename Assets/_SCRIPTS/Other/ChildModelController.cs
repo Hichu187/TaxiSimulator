@@ -7,13 +7,13 @@ using UnityEngine.PlayerLoop;
 
 public class ChildModelController : MonoBehaviour
 {
-    private Animator anim;
+    public Animator anim;
     private NavMeshAgent agent;
     public CarManager vehicle;
     public bool isMoving;
     void OnEnable()
     {
-        anim = transform.GetChild(0).GetComponent<Animator>();
+        //anim = transform.GetChild(0).GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         vehicle = FindObjectOfType<CarManager>();
 

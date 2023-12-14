@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ad6484293e4284e874b9396dd72e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 7559090488113134257}
   vehicle: {fileID: 0}
   isMoving: 0
 --- !u!136 &5445842265052477565
@@ -158,6 +159,11 @@ PrefabInstance:
 --- !u!4 &7182282714525212682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3715862809251223045, guid: 853068a512c63de4b802c6f45e8934c4, type: 3}
+  m_PrefabInstance: {fileID: 5782056337839306255}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7559090488113134257 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4096785981585312958, guid: 853068a512c63de4b802c6f45e8934c4, type: 3}
   m_PrefabInstance: {fileID: 5782056337839306255}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9163575602034460051
@@ -605,7 +611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5128148557398839879, guid: 92e7ab9ecaec69145aecb8d898f2f996, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5215498072729523627, guid: 92e7ab9ecaec69145aecb8d898f2f996, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

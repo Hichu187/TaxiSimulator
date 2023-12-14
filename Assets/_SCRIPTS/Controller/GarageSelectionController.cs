@@ -122,6 +122,7 @@ public class GarageSelectionController : MonoBehaviour
 
         // And enabling only selected vehicle.
         _spawnedVehicles[selectedIndex].gameObject.SetActive(true);
+        _spawnedVehicles[selectedIndex].transform.position = spawnPosition.position;
 
     }
 
