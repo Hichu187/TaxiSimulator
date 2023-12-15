@@ -4,6 +4,7 @@ using DG.Tweening;
 using MTAssets.EasyMinimapSystem;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestController : MonoBehaviour
 {
@@ -51,6 +52,9 @@ public class QuestController : MonoBehaviour
     public int cooldown = 60;
     private int timerQuest;
     Sequence sequence;
+    public GameObject chat;
+    public Image avatar;
+    public TextMeshProUGUI texts;
 
     void Start()
     {
@@ -113,9 +117,11 @@ public class QuestController : MonoBehaviour
         }).SetEase(Ease.Linear)
         .OnComplete(() =>
         {
-            text.color = Color.red;
+            //text.color = Color.red;
         });
         sequence.Kill();
+
+        
     }
     public void SetDestinationPoint()
     {
@@ -126,6 +132,8 @@ public class QuestController : MonoBehaviour
         mapRoutes.enabled = true;
         hitTime = 0;
         quality = RideQuality.Happy;
+
+        Invoke("OpenChat",7f);
     }
     public void Complete()
     {
@@ -173,6 +181,8 @@ public class QuestController : MonoBehaviour
             }
         }
 
+        avatar.sprite = currentQuest.avatar;
+        texts.text = currentQuest.dialogues[0];
         Invoke("CalculateDistanceAndCash", 0.5f);
     }
 
@@ -210,6 +220,17 @@ public class QuestController : MonoBehaviour
         .OnComplete(() => { OpenPhoneNotice(); }));
     }
 
+    public void OpenChat()
+    {
+        chat.transform.DOLocalMoveX(0, 0.5f).OnComplete(()=>{AudioController.instance.PassengerTalk2();});      
+
+        Invoke("closeChat",10f);
+
+    }
+    public void closeChat()
+    {
+        chat.transform.DOLocalMoveX(500, 0.25f);
+    }
     public void OpenPhoneNotice()
     {
         phonePanel.LoadData();
