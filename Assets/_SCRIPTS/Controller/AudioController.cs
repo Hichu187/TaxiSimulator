@@ -45,7 +45,7 @@ public class AudioController : MonoBehaviour
     {
         if (settingPanel)
         {
-            musicSpeaker.volume = musicSlider.value / 5f;
+            musicSpeaker.volume = musicSlider.value / 2.5f;
 
             foreach (AudioSource spk in soundSpeaker)
             {
