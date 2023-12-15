@@ -21,6 +21,12 @@ public class ChildModelController : MonoBehaviour
         EventController.instance.setupDone += Disable;
         EventController.instance.setupDone += Disable;
 
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).gameObject.activeSelf == true) anim = transform.GetChild(i).GetComponent<Animator>();
+            return;
+        }
+
     }
     void Update()
     {
