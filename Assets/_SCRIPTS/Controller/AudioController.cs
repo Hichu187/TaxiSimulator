@@ -21,6 +21,9 @@ public class AudioController : MonoBehaviour
     public AudioClip mess;
     public List<AudioClip> passegerTask1;
     public List<AudioClip> passegerTask2;
+    public AudioClip opendoor;
+    public AudioClip closedoor;
+
     void Start()
     {
         if (!PlayerPrefs.HasKey("musicValue")) PlayerPrefs.SetFloat("musicValue", 1);
@@ -33,6 +36,9 @@ public class AudioController : MonoBehaviour
         EventController.instance.startGame += setupAudio;
         EventController.instance.takeACall += PhoneNotice;
         EventController.instance.openPhone += PassengerTalk1;
+        EventController.instance.closeDoor += Closedoor;
+        EventController.instance.getIn += Opendoor;
+        EventController.instance.completeTrip += CompleteQuest;
     }
 
     void Update()
@@ -76,11 +82,28 @@ public class AudioController : MonoBehaviour
 
     void PassengerTalk1()
     {
-        Invoke("talk",0.5f);
+        if (QuestController.instance.questTime != 2)
+        {
+            Invoke("talk", 0.5f);
+        }
     }
 
     void talk()
     {
         soundfx.PlayOneShot(passegerTask1[PlayerPrefs.GetInt("questID")]);
+    }
+
+    void Opendoor()
+    {
+        soundfx.PlayOneShot(opendoor);
+    }
+    void Closedoor()
+    {
+        soundfx.PlayOneShot(closedoor);
+    }
+
+    void CompleteQuest()
+    {
+        soundfx.PlayOneShot(completefx);
     }
 }

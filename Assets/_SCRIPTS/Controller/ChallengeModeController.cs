@@ -25,9 +25,10 @@ public class ChallengeModeController : MonoBehaviour
     }
     void Start()
     {
-        noticeCanvas.SetActive(false);
-        SpawnSelectedVehicles();
         SetUpLevel();
+        noticeCanvas.SetActive(false);
+        spawnPosition = GameObject.FindGameObjectWithTag("SpawnPosition").transform;
+        SpawnSelectedVehicles();
 
         EventController.instance.parkingDone += ParkingDone;
         Debug.Log(objectLevels.transform.childCount);
