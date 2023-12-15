@@ -65,7 +65,6 @@ public class AudioController : MonoBehaviour
 
     void setupAudio()
     {
-
         model = FindObjectOfType<RCC_CarControllerV3>();
 
         AudioSource[] allAudioSources = Resources.FindObjectsOfTypeAll<AudioSource>();
@@ -91,6 +90,12 @@ public class AudioController : MonoBehaviour
             Invoke("talk", 0.5f);
         }
     }
+
+    public void PassengerTalk2()
+    {
+        soundfx.PlayOneShot(passegerTask2[PlayerPrefs.GetInt("questID")]);
+    }
+
 
     void talk()
     {
