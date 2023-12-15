@@ -49,7 +49,11 @@ public class AudioController : MonoBehaviour
 
             foreach (AudioSource spk in soundSpeaker)
             {
-                spk.volume = soundSlider.value;
+                if (spk != null)
+                {
+                    spk.volume = soundSlider.value;
+                }
+
             }
             if (model)
             {
