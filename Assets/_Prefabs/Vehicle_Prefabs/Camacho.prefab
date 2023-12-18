@@ -1284,7 +1284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3263682353507642354
 Transform:
   m_ObjectHideFlags: 0
@@ -1616,7 +1616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorPosition: {fileID: 2454317748199991011}
   passengerSheet: {fileID: 247607216743900693}
-  humanModel: {fileID: 343432244656816691}
+  humanModel: {fileID: 0}
 --- !u!114 &919132149112701151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6390,11 +6390,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b40d7761d481aa647b4e2166a17c55fa, type: 3}
---- !u!1 &343432244656816691 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4035604068423686100, guid: b40d7761d481aa647b4e2166a17c55fa, type: 3}
-  m_PrefabInstance: {fileID: 4378982398355609063}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2826852555638617127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2017535831808549312, guid: b40d7761d481aa647b4e2166a17c55fa, type: 3}
