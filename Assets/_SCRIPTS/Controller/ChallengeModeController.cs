@@ -10,6 +10,8 @@ public class ChallengeModeController : MonoBehaviour
     public static ChallengeModeController instance;
     public List<RCC_CarControllerV3> _spawnedVehicles = new List<RCC_CarControllerV3>();
     public Transform spawnPosition;
+    public LineRenderer line;
+    public Transform destination;
     public RCC_CarControllerV3 player;
     public GameObject objectLevels;
     public GameObject currentLevelObject;
@@ -28,18 +30,33 @@ public class ChallengeModeController : MonoBehaviour
         SetUpLevel();
         noticeCanvas.SetActive(false);
         spawnPosition = GameObject.FindGameObjectWithTag("SpawnPosition").transform;
+        destination = GameObject.FindGameObjectWithTag("Destination").transform;
+        line = GameObject.FindObjectOfType<LineRenderer>();
         SpawnSelectedVehicles();
 
         EventController.instance.parkingDone += ParkingDone;
         Debug.Log(objectLevels.transform.childCount);
     }
-
+    void Update()
+    {
+        if (player && line)
+        {
+            line.SetPosition(line.positionCount-1, new Vector3(player.transform.position.x, 0.05f, player.transform.position.z));
+        }
+    }
     void SpawnSelectedVehicles()
     {
+
         int vehicleID = PlayerPrefs.GetInt("selectedVehicel");
         _spawnedVehicles[vehicleID].transform.position = spawnPosition.position;
         _spawnedVehicles[vehicleID].transform.rotation = spawnPosition.rotation;
         _spawnedVehicles[vehicleID].gameObject.SetActive(true);
+        if (line)
+        {
+            line.SetPosition(line.positionCount-1, new Vector3(spawnPosition.position.x, 0.05f, spawnPosition.position.z));
+            line.SetPosition(0, new Vector3(destination.position.x, 0.05f, destination.position.z));
+        }
+
         Invoke("StartGame", 1);
     }
 
@@ -59,6 +76,7 @@ public class ChallengeModeController : MonoBehaviour
     {
         player.canControl = false;
         Invoke("WinChallenge", 1.5f);
+        if(line)line.gameObject.SetActive(false);
     }
 
     public void WinChallenge()

@@ -9,7 +9,7 @@ public class DestinationCheck : MonoBehaviour
 {
     private RCC_CarControllerV3 vehicle;
     private float timeInsideTrigger = 0f;
-    private float requiredTimeInsideTrigger = 3f;
+    private float requiredTimeInsideTrigger = 1.5f;
     public List<GameObject> charModel;
     public GameObject curModel;
     public bool endPos;

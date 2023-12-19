@@ -11,6 +11,12 @@ public class ChildModelController : MonoBehaviour
     private NavMeshAgent agent;
     public CarManager vehicle;
     public bool isMoving;
+    public List<GameObject> model;
+    public GameObject curModel;
+    void Start()
+    {
+        
+    }
     void OnEnable()
     {
         //anim = transform.GetChild(0).GetComponent<Animator>();
@@ -20,13 +26,7 @@ public class ChildModelController : MonoBehaviour
         //EventController.instance.carStop += CarStop;
         EventController.instance.setupDone += Disable;
         EventController.instance.setupDone += Disable;
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if (transform.GetChild(i).gameObject.activeSelf == true) anim = transform.GetChild(i).GetComponent<Animator>();
-            return;
-        }
-
+        SetUpQuest();
     }
     void Update()
     {
@@ -41,6 +41,13 @@ public class ChildModelController : MonoBehaviour
             }
         }
 
+    }
+
+    void SetUpQuest()
+    {
+        curModel = model[PlayerPrefs.GetInt("questID")];
+        curModel.gameObject.SetActive(true);
+        anim = curModel.GetComponent<Animator>();
     }
     public void Disable()
     {
