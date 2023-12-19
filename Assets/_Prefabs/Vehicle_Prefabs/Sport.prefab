@@ -935,7 +935,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.16976517, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.9751764, y: 0.39264694, z: 0.72604966}
+  m_ConnectedAnchor: {x: -0.9751708, y: 0.3926469, z: 0.7260498}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1970,7 +1970,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.8093797, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.1071457, z: 0.104970925}
+  m_ConnectedAnchor: {x: 0.0000000016630761, y: 0.10714574, z: 0.10497056}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2266,6 +2266,8 @@ Transform:
   - {fileID: 2596108791112655342}
   - {fileID: 1541778952117062117}
   - {fileID: 5124666012008411035}
+  - {fileID: 6197141789974937235}
+  - {fileID: 770022664934085329}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 165, z: 0}
@@ -2314,7 +2316,7 @@ MonoBehaviour:
   hasExtraWheels: 0
   overrideAllWheels: 0
   poweredWheels: 0
-  SteeringWheel: {fileID: 0}
+  SteeringWheel: {fileID: 2802042271392782345}
   steeringWheelRotateAround: 2
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 2
@@ -3023,7 +3025,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.7952862, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.09446163, z: 0.104970925}
+  m_ConnectedAnchor: {x: 0.0000000016630761, y: 0.09446166, z: 0.10497056}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -3582,6 +3584,50 @@ Transform:
   m_Father: {fileID: 8774818331270917916}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4185190871412566532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6197141789974937235}
+  - component: {fileID: 6548476928550014080}
+  m_Layer: 8
+  m_Name: HoodCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6197141789974937235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185190871412566532}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.412, y: 0.453, z: 0.008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2561847034053925039}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6548476928550014080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185190871412566532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df49e4c9448a62f4b9f91d03ef06dfb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4334298033649726961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4348,7 +4394,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.16938221, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.9751764, y: 0.39230224, z: 0.72604966}
+  m_ConnectedAnchor: {x: 0.975171, y: 0.39230224, z: 0.72604984}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -5654,6 +5700,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7610947092403184648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770022664934085329}
+  - component: {fileID: 2436183134046086194}
+  m_Layer: 8
+  m_Name: WheelCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &770022664934085329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7610947092403184648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4340056, y: -0.12999997, z: -2.3010087}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2561847034053925039}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2436183134046086194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7610947092403184648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc8ca0593957224185acb02da2730dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7995280058248658362
 GameObject:
   m_ObjectHideFlags: 0

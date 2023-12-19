@@ -1198,6 +1198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8505588643203161194}
+  - component: {fileID: 8219591966202831806}
   m_Layer: 8
   m_Name: WheelCamera
   m_TagString: Untagged
@@ -1213,13 +1214,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2876294661816824275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.03, y: -0.455, z: -1.267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8249163201358742004}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8219591966202831806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2876294661816824275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc8ca0593957224185acb02da2730dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3046017649948947079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,10 +2815,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6547541672478183255}
+  - component: {fileID: 8984334305841530822}
   m_Layer: 8
   m_Name: HoodCamera
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2817,13 +2831,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5777572845219709376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.3788, y: 0.279, z: 0.113}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8249163201358742004}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8984334305841530822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5777572845219709376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df49e4c9448a62f4b9f91d03ef06dfb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5820898984105440308
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,7 +3260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6411749133617232749
 Transform:
   m_ObjectHideFlags: 0
@@ -4212,7 +4238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8249163201358742004
 Transform:
   m_ObjectHideFlags: 0
@@ -4283,7 +4309,7 @@ MonoBehaviour:
   hasExtraWheels: 0
   overrideAllWheels: 0
   poweredWheels: 0
-  SteeringWheel: {fileID: 0}
+  SteeringWheel: {fileID: 7050887717214530957}
   steeringWheelRotateAround: 2
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1

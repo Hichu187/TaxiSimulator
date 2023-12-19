@@ -64,7 +64,7 @@ MeshRenderer:
   - {fileID: -5506082081026578385, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
   - {fileID: -5818753205514285992, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
   - {fileID: 6751935864723403272, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
-  - {fileID: -8550364348469580344, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
+  - {fileID: 2100000, guid: 439155c59e09a1c4782fcbce8a616cc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -254,6 +254,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2648504618288320165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4756530790604310167}
+  - component: {fileID: 2757435974076381347}
+  m_Layer: 8
+  m_Name: HoodCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4756530790604310167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2648504618288320165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.377, y: 1.125, z: 0.182}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6760320211898625902}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2757435974076381347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2648504618288320165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df49e4c9448a62f4b9f91d03ef06dfb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4203732079491888048
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +444,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: -5506082081026578385, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
   - {fileID: 6751935864723403272, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
-  - {fileID: -8550364348469580344, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
+  - {fileID: 2100000, guid: 439155c59e09a1c4782fcbce8a616cc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -486,7 +530,7 @@ MeshRenderer:
   - {fileID: -5506082081026578385, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
   - {fileID: -5818753205514285992, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
   - {fileID: 6751935864723403272, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
-  - {fileID: -8550364348469580344, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
+  - {fileID: 2100000, guid: 439155c59e09a1c4782fcbce8a616cc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -571,7 +615,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: -5506082081026578385, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
   - {fileID: 6751935864723403272, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
-  - {fileID: -8550364348469580344, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
+  - {fileID: 2100000, guid: 439155c59e09a1c4782fcbce8a616cc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -654,7 +698,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8550364348469580344, guid: 78e9da5866dff0c4684340e5c5db6c96, type: 3}
+  - {fileID: 2100000, guid: 439155c59e09a1c4782fcbce8a616cc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1191,7 +1235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6760320211898625902
 Transform:
   m_ObjectHideFlags: 0
@@ -1212,6 +1256,8 @@ Transform:
   - {fileID: 6760320212154218580}
   - {fileID: 6760320211258788810}
   - {fileID: 6760320212760686106}
+  - {fileID: 4756530790604310167}
+  - {fileID: 1975595039192218454}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1260,7 +1306,7 @@ MonoBehaviour:
   hasExtraWheels: 0
   overrideAllWheels: 0
   poweredWheels: 0
-  SteeringWheel: {fileID: 0}
+  SteeringWheel: {fileID: 639984935898521972}
   steeringWheelRotateAround: 2
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1
@@ -1986,3 +2032,47 @@ Transform:
   m_Father: {fileID: 4798453362099815783}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8925268491320214709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975595039192218454}
+  - component: {fileID: 1094377490839595704}
+  m_Layer: 8
+  m_Name: WheelCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1975595039192218454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925268491320214709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.715, y: 1.6557144, z: -2.277}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6760320211898625902}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1094377490839595704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8925268491320214709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc8ca0593957224185acb02da2730dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
