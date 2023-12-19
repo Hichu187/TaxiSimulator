@@ -401,6 +401,7 @@ Transform:
   - {fileID: 98427446}
   - {fileID: 2041513099}
   - {fileID: 469148021}
+  - {fileID: 955999030}
   m_Father: {fileID: 1218507118}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 165, z: 0}
@@ -4123,6 +4124,84 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &955999029
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 85514657}
+    m_Modifications:
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625903, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_Name
+      value: Taxi
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760320211898625903, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+--- !u!4 &955999030 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6760320211898625902, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+  m_PrefabInstance: {fileID: 955999029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &958844068
 GameObject:
   m_ObjectHideFlags: 0
@@ -10774,6 +10853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnedVehicles:
+  - {fileID: 2119421805}
   - {fileID: 2041513100}
   - {fileID: 549152594}
   - {fileID: 966661323}
@@ -10792,6 +10872,7 @@ MonoBehaviour:
   spawnPosition: {fileID: 85514657}
   selectedIndex: 0
   vehicleDatas:
+  - {fileID: 11400000, guid: 35a6ca0756d456f438d61c4fa2776ff3, type: 2}
   - {fileID: 11400000, guid: d5fed22a631482b4ba15e0dec0421fd1, type: 2}
   - {fileID: 11400000, guid: 77ecdbb9d2c892344a60a1a4546a31bd, type: 2}
   - {fileID: 11400000, guid: b7605d52d799a734a83b49d03ac3b0f9, type: 2}
@@ -11038,6 +11119,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090862063}
   m_CullTransparentMesh: 1
+--- !u!114 &2119421805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6760320211898625897, guid: 9ab1e5af0fe403e4896f7b2d684548fc, type: 3}
+  m_PrefabInstance: {fileID: 955999029}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25271813931d814680ab7c84ef90710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2128998273
 GameObject:
   m_ObjectHideFlags: 0
