@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using MTAssets.EasyMinimapSystem;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -20,6 +21,7 @@ public class ChallengeModeController : MonoBehaviour
     public GameObject noticeCanvas;
     public GameObject loadingScene;
     public Image slider;
+    public TextMeshProUGUI cash;
     void Awake()
     {
         instance = this;
@@ -36,6 +38,7 @@ public class ChallengeModeController : MonoBehaviour
 
         EventController.instance.parkingDone += ParkingDone;
         Debug.Log(objectLevels.transform.childCount);
+        cash.text = PlayerPrefs.GetInt("cash").ToString();
     }
     void Update()
     {
