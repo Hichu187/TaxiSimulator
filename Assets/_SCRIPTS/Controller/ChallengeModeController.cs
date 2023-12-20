@@ -103,7 +103,7 @@ public class ChallengeModeController : MonoBehaviour
     IEnumerator LoadLevel()
     {
         loadingScene.SetActive(true);
-        AsyncOperation op = SceneManager.LoadSceneAsync(1);
+        AsyncOperation op = SceneManager.LoadSceneAsync(2);
 
         while (!op.isDone)
         {
@@ -115,6 +115,6 @@ public class ChallengeModeController : MonoBehaviour
     }
     public void Reset()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }

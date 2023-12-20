@@ -35,13 +35,13 @@ public class SceneController : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     IEnumerator LoadLevel()
     {
         loadingScene.SetActive(true);
-        AsyncOperation op = SceneManager.LoadSceneAsync(1);
+        AsyncOperation op = SceneManager.LoadSceneAsync(2);
 
         while (!op.isDone)
         {
@@ -56,6 +56,6 @@ public class SceneController : MonoBehaviour
 
     public void LoadParkingScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }
