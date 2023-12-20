@@ -1245,7 +1245,7 @@ Transform:
   m_GameObject: {fileID: 6760320211898625903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.56, y: 0.56, z: 0.56}
+  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4798453362099815783}
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   steeringWheelAngleMultiplier: 11
   wheelTypeChoise: 1
   externalController: 0
-  steeringType: 0
+  steeringType: 1
   steerAngleCurve:
     serializedVersion: 2
     m_Curve:
@@ -1346,43 +1346,43 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   steerAngle: 40
-  highspeedsteerAngle: 5
+  highspeedsteerAngle: 15
   highspeedsteerAngleAtspeed: 120
-  antiRollFrontHorizontal: 1000
-  antiRollRearHorizontal: 1000
+  antiRollFrontHorizontal: 13000
+  antiRollRearHorizontal: 13000
   antiRollVertical: 0
   COM: {fileID: 6760320212154218580}
   COMAssister: 0
   brakeTorque: 2000
   downForce: 25
   speed: 0
-  maxspeed: 240
+  maxspeed: 190
   engineTorqueCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 800
-      value: 150
-      inSlope: 0.031914894
-      outSlope: 0.031914894
+      value: 125
+      inSlope: 0.026595745
+      outSlope: 0.026595745
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 5500
-      value: 300
-      inSlope: -0.017375888
-      outSlope: -0.017375888
+      value: 250
+      inSlope: -0.0144799035
+      outSlope: -0.0144799035
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 7000
-      value: 200
-      inSlope: -0.06666667
-      outSlope: -0.06666667
+      value: 166.66667
+      inSlope: -0.055555552
+      outSlope: -0.055555552
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -1391,7 +1391,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   autoGenerateEngineRPMCurve: 1
-  maxEngineTorque: 300
+  maxEngineTorque: 250
   maxEngineTorqueAtRPM: 5500
   minEngineRPM: 800
   maxEngineRPM: 7000
@@ -1441,8 +1441,8 @@ MonoBehaviour:
   currentGear: 0
   NGear: 0
   finalRatio: 3.23
-  gearShiftingDelay: 0.35
-  gearShiftingThreshold: 0.75
+  gearShiftingDelay: 0.01
+  gearShiftingThreshold: 0.85
   clutchInertia: 0.25
   gearShiftUpRPM: 6500
   gearShiftDownRPM: 3500
@@ -1504,7 +1504,7 @@ MonoBehaviour:
     damageResolution: 100
     damageFilter:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 130879
     damageRadius: 0.5
     damageMultiplier: 1
     maximumDamage: 0.5
@@ -1540,9 +1540,9 @@ MonoBehaviour:
   TCSStrength: 0.5
   ESPThreshold: 0.5
   ESPStrength: 0.25
-  steerHelperLinearVelStrength: 0.1
-  steerHelperAngularVelStrength: 0.1
-  tractionHelperStrength: 0.1
+  steerHelperLinearVelStrength: 0.8
+  steerHelperAngularVelStrength: 0.8
+  tractionHelperStrength: 0.8
   angularDragHelperStrength: 0.1
   ABSAct: 0
   TCSAct: 0
